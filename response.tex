@@ -1,0 +1,162 @@
+\documentclass[aps,prb,onecolumn,nofootinbib,citeautoscript,10pt]{revtex4-2} 
+
+
+\synctex=1 
+
+
+\usepackage{amsmath,amssymb} 
+\usepackage{comment}
+
+\usepackage[tight]{subfigure} 
+
+\usepackage[dvipsnames]{xcolor} 
+\usepackage[papersize={8.5in,11in}]{geometry}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters 
+    pdftoolbar=true,        % show Acrobat
+    pdfmenubar=true,        % show Acrobat 
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=magenta, %red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=blue,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+} 
+
+\geometry{top=1.2 cm, left= 1.2 cm, right= 1.2 cm, bottom= 1.2 cm}        
+
+
+
+%========================= new packages for deletion ==================================
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+
+\newcommand{\cdel}[1]{\textcolor{red}{\sout{#1}}}
+\newcommand{\cadd}[1]{\textcolor{blue}{#1}}
+\newcommand{\eqn}[1]{\textcolor{red}{(#1)}}
+\DeclareMathOperator{\arctanh}{arctanh}
+
+
+
+%========================= PACKAGES ==================================
+\usepackage{dcolumn}
+\usepackage{color}
+\usepackage{amssymb,amsmath}
+\usepackage{tabularx,graphicx}
+\usepackage{epstopdf}
+\usepackage{latexsym}
+\usepackage{colortbl}
+\usepackage{psfrag}
+\usepackage{bbm,bm,array,physics}
+\usepackage{dsfont}
+\usepackage{float, mathrsfs}
+
+\def \nn{\nonumber \\}
+\def\*#1{\boldsymbol{#1}} %\bold font
+\newcommand{\at}[2][]{#1|_{#2}}
+\DeclareRobustCommand{\bs}[1]{\bm{#1}}
+
+\newcommand{\figuretag}[1]{%
+  \addtocounter{figure}{-1}%
+  \renewcommand{\thefigure}{#1}%
+}
+
+%=======================================================================
+%========================= ARTICLE STARTS HERE =========================
+%=======================================================================
+\begin{document}
+
+\noindent Dear Editor,\\
+\\ \noindent Thank you very much for your careful reading of the revised manuscript and for the further points that you have asked us to clarify. We have addressed each of them below, and the comments are highlighted in blue. All the corresponding changes are marked in red in the revised manuscript. We trust that the manuscript is now suitable for publication.
+\\\\ \noindent Sincerely,
+
+\noindent Author
+
+\vspace{0.5 cm}
+
+\section{Response to the further comments}
+
+\begin{enumerate}
+
+%%%%%%%%%%%%%%
+\item \textcolor{blue}{Magnetic-field notation, page 2: Please replace ``linear-in-$|\bs B|$'' with ``linear-in-$B_z$'' if you mean a contribution that changes sign when the magnetic field is reversed. A term proportional to $|\bs B|$ does not change sign. Please use consistent notation throughout.}
+
+We thank you for pointing this out. We indeed mean a contribution that changes sign when the magnetic field is reversed along the anisotropy axis, and the notation $|\bs B|$ was therefore incorrect. The Introduction on page~2 now reads as follows.
+\\``Rather than resorting to the relaxation-time approximation used in that earlier work, we solve the linearised Boltzmann equation for the collinear configuration exactly, and find that the resulting magnetoconductivity for the VNR and the HSM contains an additional linear-in-$B_z$ term (here $B_z$ is the component of $\bs B$ along $\hat{\bs z}$, and the term changes sign when $B_z$ is reversed), absent for BC-monopole and PTNR nodes, which we trace directly to the absence of standalone time-reversal symmetry in these two dipolar models.''
+\\In the same paragraph, the later phrase on the two-node HSM now reads ``the odd-in-$B_z$ terms of the two nodes cancel in the sum''.
+
+We have also corrected the same inconsistency in further places, in each of which the field component along $\hat{\bs z}$ was meant:
+\begin{enumerate}
+
+\item In the first paragraph of Sec.~III, the phrase ``odd-in-$B$ behaviour of $\sigma_{zz}$'' now reads ``odd-in-$B_z$ behaviour of $\sigma_{zz}$''.
+\item In the discussion of the VNR in Sec.~III, the sentences describing the conductivity curves now read:
+\item ``The linear-in-$B_z$ term dominates for $\mu=0.01$. For $\mu=0.04$, the linear and quadratic terms are comparable over the plotted range, and the quadratic term takes over at the largest values of $|B_z|$.''
+\item In the Summary, the phrase ``anomalous linear magnetoconductance'' now reads ``anomalous linear-in-$B_z$ magnetoconductance''.
+%%%%%%%%%%%%%
+\item The captions of the figures showing $\delta\sigma_{zz}$
+\end{enumerate}
+All the other places already used $B_z$, namely the abstract, the discussion of the symmetry of the VNR and the HSM, the two-node subsection and the Summary.
+
+%%%%%%%%%%%%%%
+\item \textcolor{blue}{Near-node behavior, Section III D: Please distinguish results within the valid semiclassical regime from predictions obtained by extending the formulas beyond it. The proposed Fermi-surface change and square-root singularity occur outside the controlled weak-field regime and should be qualified accordingly. A square root in the Fermi momentum alone does not establish the same behavior in the conductivity. Please also justify or soften the statement that finite temperature cuts off the growth, since the calculations use $T=0$.}
+
+We agree that the discussion of the near-node behaviour did not separate the statements that follow from the weak-field calculation from those that arise only on extending the formulas beyond it. We have rewritten the subsection accordingly, and we address the three parts of the comment in turn.
+
+First, the regime of validity is now stated explicitly. The Boltzmann equation used in this work is applicable only for low $|B_z|$, where the formation of Landau levels can be ignored. For the HSM, the parameter $\zeta_{\rm h}=e\,B_z\,v_0^2/\mu^2=\left(v_0\sqrt{e\,B_z}/\mu\right)^2$ is the only dimensionless combination of $\mu$, $B_z$ and $v_0$, and the neglect of Landau levels can therefore only be a condition on $\zeta_{\rm h}$. The response of the VNR is governed by $\zeta_{\rm v}=e\,v_0\,B_z/(2\,k_0\,\mu)$. Our results are controlled only for $|\zeta_{\rm h}|\ll1$ and $|\zeta_{\rm v}|\ll1$, respectively. The change of the Fermi surface of the HSM at $\zeta_{\rm h}=1/2$ occurs at $\mu\sim v_0\sqrt{e\,B_z}$, where Landau quantisation cannot be neglected. This change and the pinch-off of the tube of the VNR at $\zeta_{\rm v}=1$ lie outside the regime of validity, and they are now identified as features of the extended formulas. For the HSM, we also note that the argument of Sec.~III~B for discarding the second root of $\xi_2=\mu$ rests on its being parametrically small for weak fields. At $\zeta_{\rm h}=1/2$ the two roots coincide, and the argument no longer applies. We have also dropped the statement that the Fermi surface acquires a toroidal topology, since it relies on the second root.
+
+Second, we agree that a square root in $k_F$ does not establish the same behaviour in the conductivity. We have withdrawn the expected square-root branch point of $\delta\sigma_{zz}$. The weight of the $\gamma$-integrals contains the inverse of the derivative of $\xi_2$ with respect to $k$ at fixed $\gamma$, evaluated at $k_F$. This derivative equals $\sqrt{\mu^2-2\,e\,v_0^2\,B_z\cos^2\gamma}\,/\,k_F$ and vanishes together with the radicand. The behaviour of $\delta\sigma_{zz}$ at $\zeta_{\rm h}=1/2$ therefore cannot be read off from $k_F$. We make no claim on this point, since the Boltzmann treatment itself is not applicable there.
+
+Third, we agree that the statement on finite temperature was not supported, since all the calculations are performed at $T=0$. We have removed it and have stated instead that all the results of the subsection refer to $T=0$.
+
+For the same reason, we have replaced two further statements of the earlier text. The remark that the divergence of the BC is integrable has been replaced by the statement that, at $T=0$, the BC and the OMM enter only through their values on the Fermi surface. The requirement $\mu\gg v_0\sqrt{e\,B_z}$ for the semiclassical treatment has been replaced by an argument based on the fact that $\zeta_{\rm h}$ is the only dimensionless combination available for the HSM. We have also stated that the ratio of $\delta\sigma_{zz}$ to the conductivity at $B_z=0$, and not $\delta\sigma_{zz}$ itself, depends on $\zeta_{\rm h}$ alone at fixed ratios of the scattering amplitudes. The subsection now reads as follows.
+\\``Let us comment on the limit $\mu\to0$ at fixed $B_z$. All the results of this subsection refer to $T=0$. The Boltzmann equation used in this work is applicable only for low $|B_z|$, where the formation of Landau levels can be ignored. We separate the conclusions that follow from the calculation within this regime from the features that arise only on extending the formulas beyond it. For the HSM node, the Zeeman-like shift gives $\xi_2(\bs k)=v_0\,k+e\,v_0\,B_z\cos^2\gamma/(2\,k)$. The only scales are $\mu$ and $v_0\sqrt{e\,B_z}$, so that the ratio of $\delta\sigma_{zz}$ to the conductivity at $B_z=0$ is, at fixed ratios of the scattering amplitudes, a function of the single parameter
+\begin{align}
+\zeta_{\rm h}=\frac{e\,B_z\,v_0^2}{\mu^2}\,.
+\end{align}
+The coefficient of the $n^{\rm th}$ power of $B_z$ in this ratio, whether odd or even, therefore scales as $\mu^{-2n}$ at fixed $B_z$, and the weak-field expansion is controlled only for $\zeta_{\rm h}\ll1$. The same condition governs the applicability of the Boltzmann equation. The parameter $\zeta_{\rm h}=\left(v_0\sqrt{e\,B_z}/\mu\right)^2$ is the only dimensionless combination of $\mu$, $B_z$ and $v_0$, and the neglect of Landau levels can therefore only be a condition on $\zeta_{\rm h}$. This is the regime of weak fields, $e\,B_z\,v_0^2\ll\mu^2$, considered in Sec.~III~B, and it is the only regime in which our results are controlled. For $B_z>0$, the minimum of $\xi_2$ along the direction $\gamma$ equals $v_0\sqrt{2\,e\,B_z}\,|\cos\gamma|$. This coincides with the reality condition of the retained root of $k_F$ in Sec.~III~B. The condition holds for all $\gamma$ only if $\zeta_{\rm h}\le1/2$. For $\zeta_{\rm h}>1/2$, the radicand of $k_F$ is negative for the directions with $\cos^2\gamma>\mu^2/(2\,e\,v_0^2\,B_z)$, and the retained root does not exist near the poles. At the boundary of this region, the two roots of the quadratic equation $\xi_2=\mu$ coincide. The argument of Sec.~III~B for discarding the second root rests on its being parametrically small for weak fields, and it does not apply once $\zeta_{\rm h}$ is no longer small. The opening of the Fermi surface near the poles in the extended formulas is therefore a feature of the extension beyond the controlled regime, and not a result of the weak-field calculation. It occurs at $\mu\sim v_0\sqrt{e\,B_z}$, where Landau quantisation cannot be neglected. A square root in $k_F$ does not by itself fix the behaviour of $\delta\sigma_{zz}$ at $\zeta_{\rm h}=1/2$. The conductivity is built from integrals over $\gamma$, and their weight contains the inverse of the derivative of $\xi_2$ with respect to $k$ at fixed $\gamma$, evaluated at $k_F$. This derivative equals $\sqrt{\mu^2-2\,e\,v_0^2\,B_z\cos^2\gamma}\,/\,k_F$ and vanishes together with the radicand. We make no claim on the behaviour of $\delta\sigma_{zz}$ at $\zeta_{\rm h}=1/2$, since the Boltzmann treatment is not applicable there. No such restriction on the reality of $k_F$ exists for $B_z<0$, since the radicand is then positive for every $\gamma$. Which sign of $B_z$ is restricted depends on the sign conventions for $e$, the BC and the OMM that fix the Zeeman-like shift, and in the two-node case on $\chi$, since only the product of $B_z$ with these signs enters the radicand. For either sign of $B_z$, the weak-field expansion is controlled only for $|\zeta_{\rm h}|\ll1$.
+
+For the VNR, the Zeeman-like shift reduces at leading order in $\kappa/k_0$ to $e\,v_0\,B_z\sin^2\gamma/(2\,k_0)$, which does not depend on $\kappa$. The Fermi momentum becomes $\kappa_F=\mu/v_0-e\,B_z\sin^2\gamma/(2\,k_0)$, and both the OMM and the BC corrections organise in powers of
+\begin{align}
+\zeta_{\rm v}=\frac{e\,v_0\,B_z}{2\,k_0\,\mu}\,.
+\end{align}
+The expansion coefficients then grow as $\mu^{-n}$, which is milder than for the HSM. These expressions are controlled only for $|\zeta_{\rm v}|\ll1$. For $B_z>0$, the expression for $\kappa_F$ vanishes at $\gamma=\pm\pi/2$ when $\zeta_{\rm v}=1$, where the tube of the toroidal Fermi surface would pinch off in the extended formula. This lies outside the regime $|\zeta_{\rm v}|\ll1$ in which the expression was derived, and we draw no conclusion for the response from it.
+
+At $T=0$, the BC and the OMM enter the Fermi-surface integrals only through their values at $k_F$ and $\kappa_F$, and their divergences at the node and at the ring are therefore not integrated over. The growth of the coefficients, together with the changes of the Fermi surface in the extended formulas, shows that the weak-field expansion ceases to be controlled once $|\zeta_{\rm h}|$ or $|\zeta_{\rm v}|$ is no longer small. Our calculation makes no prediction for the response beyond this regime, and the growth should not be read as a prediction of a divergence. A Landau-level description would be needed to assess the response when $|\zeta_{\rm h}|$ is not small, and it lies outside the scope of the present work. For the VNR, the scale $k_0$ additionally enters. At $\mu=v_0\sqrt{e\,B_z}$, the parameter $\zeta_{\rm v}$ equals $\sqrt{e\,B_z}/(2\,k_0)$, and we have not examined the validity of the semiclassical description for the VNR at such chemical potentials. For the PTNR, the BC and OMM are supported only on the ring, and no odd-in-$B_z$ term arises on account of time-reversal symmetry.''
+
+%%%%%%%%%%%%%%
+\item \textcolor{blue}{Harmonic content, Sections III B--C: Please clarify whether the statement that $h$ contains only $\cos\gamma$ and $\cos3\gamma$ applies to an approximation or to the full expression. The full field-dependent factors can generate higher odd harmonics. Your argument that $h$ is odd and has a vanishing Fermi-surface average does not require restricting it to these two harmonics. If an expansion was used, please specify its order.}
+
+The statement applied neither to an approximation used in the solution nor to the full expression. It described the expansion of $h_2$ in powers of $B_z$, which we had not specified and which is complete only through $\mathcal O(B_z^2)$. As you anticipate, the full field-dependent factors generate higher odd harmonics. We have therefore replaced the statement by the exact expression of $h_2$ and by its expansion, and we have stated explicitly that the parity argument does not depend on the harmonic content.
+
+Defining $u=e\,B_z/k_F^2(\gamma)$, where $k_F$ depends on $\gamma$ only through $\cos^2\gamma$, the definition of $h_2$ together with the BC and the OMM of the HSM gives, for $\bs B=B_z\,\hat{\bs z}$,
+\begin{align}
+h_2(\mu,\gamma)=v_0\,\cos\gamma\;\frac{1+2\,u-\frac{1}{2}\,u\,(3+u)\cos^2\gamma}{1+u\,\cos^2\gamma}\,.
+\end{align}
+We have checked this expression against a direct evaluation of the definition of $h_2$ with a numerically computed band velocity, and against the expression of $h_2$ used in our numerical solution of the Boltzmann equation. Expanding in powers of $B_z$ at fixed $\mu$, the coefficients of $B_z^0$, $B_z^1$ and $B_z^2$ are odd polynomials in $\cos\gamma$ of degrees 1, 3 and 3, respectively, and those of $B_z^3$, $B_z^4$ and $B_z^5$ are odd polynomials of degrees 7, 9 and 11. The harmonics $\cos\gamma$ and $\cos3\gamma$ thus describe $h_2$ exactly through $\mathcal O(B_z^2)$, and $\cos (5\gamma)$, $\cos7\gamma$ and higher odd harmonics enter from $\mathcal O(B_z^3)$ onwards.
+
+No truncation in harmonics enters the solution. For any $h_2$, the in-scattering term contains only the harmonics $1$, $\cos\gamma$ and $\cos2\gamma$ of the overlap function, so that the ansatz for $\Lambda^z_2$ closes exactly, and the coefficients $\lambda$, $a$ and $b$ are fixed by integrals of the full $h_2$. As you note, the parity argument requires only that $h_2$ is odd under $\gamma\to\pi-\gamma$, which holds for the full expression. It implies that the integral of $h_2$ against any weight that is even under this transformation vanishes to all orders in $B_z$. This includes the pumping rate and the moments $M_0$ and $M_2$. The even-sector equations for $\lambda$ and $b$ are therefore homogeneous, and the number constraint removes the zero mode of this sector. Hence $\lambda=b=0$ independently of the harmonic content. We have stated the role of the number constraint explicitly in the revised text.
+
+While revising this part, we also corrected a related imprecision. The coefficient $a$ is sourced by the projection of $h_2$ onto $\cos\gamma$ with the weight $\mathcal W\,\tau_2$, and not by the Fourier component of $\cos\gamma$ in $h_2$, since the weight depends on $\gamma$. The same holds for $a_\chi$ in the two-node case. In that case, the node $\chi=+1$ coincides with the single node, and the relations $\bs\Omega_{\chi,2}=-\bs\Omega_{-\chi,2}$ and $\bs m_{\chi,2}=-\bs m_{-\chi,2}$ imply that $h_{\chi,2}$ is the single-node expression with $B_z$ replaced by $\chi\,B_z$. Its harmonic content is that of the single node. The revised text reads as follows.
+\\In Sec.~III~B, after the discussion of the Fermi momentum: ``With the retained root, the quantity $h_2$ can be written in closed form. We define $u=e\,B_z/k_F^2(\gamma)$, where $k_F$ depends on $\gamma$ only through $\cos^2\gamma$. For $\bs B=B_z\,\hat{\bs z}$, the definition of $h_2$, together with the BC and the OMM, then gives the expression for $h_2$ stated above. Expanding $h_2$ in powers of $B_z$ at fixed $\mu$, the coefficients of $B_z^0$, $B_z^1$ and $B_z^2$ are odd polynomials in $\cos\gamma$ of degrees 1, 3 and 3, respectively. Those of $B_z^3$, $B_z^4$ and $B_z^5$ are odd polynomials of degrees 7, 9 and 11. The harmonics $\cos\gamma$ and $\cos (3\gamma)$ thus describe $h_2$ exactly through $\mathcal O(B_z^2)$. The harmonics $\cos (5\gamma)$, $\cos7\gamma$ and higher odd harmonics enter from $\mathcal O(B_z^3)$ onwards.''
+\\In Sec.~III~B, the parity argument: ``Hence $w^z_2$ and $\bs\Omega_2\cdot\bs w_2$ are odd, and $h_2$ is odd under $\gamma\to\pi-\gamma$. This holds for the full expression, and no expansion in $B_z$ is involved. Since $h_2$ is $\cos\gamma$ times a function of $\cos^2\gamma$, it is a sum of odd harmonics $\cos[(2\,n+1)\,\gamma]$. The explicit form of $h_2$ and its expansion in powers of $B_z$ are given in the equation below. The argument that follows uses only the parity of $h_2$ and does not depend on its harmonic content. The integral of $h_2$ against any weight that is even under $\gamma\to\pi-\gamma$ vanishes to all orders in $B_z$. This includes the pumping rate and the moments $M_0$ and $M_2$ defined below, in analogy with the relaxation-time approximation \cite{ips-firdous-vnr}.''
+\\In the same subsection, we have added that the cancellation of $h_2$ on the left-hand side of the integral equation is exact and independent of its harmonic content, and that the harmonics $1$, $\cos\gamma$ and $\cos2\gamma$ of the overlap function alone determine the closure of the ansatz. The statement on the even sector now reads: ``They are therefore homogeneous, and $\lambda=b=0$ solves them. This solution is the one selected by the number constraint, which removes the zero mode of the even sector, since an odd $\Lambda^z_2$ integrates to zero.'' The statement on $M_1$ now reads: ``$M_1$ receives the contribution $-\int d\gamma^\prime\,\mathcal W\,\tau_2\,\cos\gamma^\prime\,h_2$ from the projection of $h_2$ onto $\cos\gamma$ with the weight $\mathcal W\,\tau_2$. At $B_z=0$, this contribution reduces to $-\,v_0\int d\gamma^\prime\,\mathcal W\,\tau_2\,\cos^2\gamma^\prime$ and is nonzero, so that $a$ is sourced.''
+\\In Sec.~III~C, the first sentences now read: ``As for the single node, $h_{\chi,2}$ is odd under $\gamma\to\pi-\gamma$ for the full expression. The $\chi$-dependence enters only through the product $\chi\,B_z$ in quantities that are even under $\bs k\to-\bs k$, and it does not affect this parity. The node $\chi=+1$ coincides with the single node, and the relations $\bs\Omega_{\chi,2}=-\bs\Omega_{-\chi,2}$ and $\bs m_{\chi,2}=-\bs m_{-\chi,2}$ then imply that $h_{\chi,2}(\mu,\gamma)$ equals the single-node expression with $B_z$ replaced by $\chi\,B_z$. Its harmonic content is therefore that of the single node, with $B_z^n$ replaced by $\chi^n\,B_z^n$. Its integral against any weight that is even under $\gamma\to\pi-\gamma$ vanishes to all orders in $B_z$.'' Finally, the remark that $h_{\chi,2}$ is odd at every order in $B_z$ retained here, in the comparison with the BC-monopole nodes, now reads ``at every order in $B_z$''.
+
+%%%%%%%%%%%%%%
+\item \textcolor{blue}{Please confirm whether these points affect any equations, numerical results, or conclusions, and submit the corrected manuscript with a brief response.}
+
+For the first point, the changes are confined to the wording of the text and of one sentence in the Introduction. No equation, no numerical result and no conclusion is affected, since all the equations and the figures already use $B_z$. For the second point, the changes are confined to the text of Sec.~III~D. No equation of Sec.~III and no figure is changed, and the curves, which are evaluated from the exact expressions with the retained root of $k_F$ at weak fields, are unaffected. The conclusions on the odd-in-$B_z$ terms and on the vertex correction rest on the symmetry arguments and do not depend on this subsection. Two statements are withdrawn, namely the expected square-root branch point of $\delta\sigma_{zz}$ at $\zeta_{\rm h}=1/2$ and the cut-off by finite temperature. The remaining statements on the changes of the Fermi surface are now qualified as features of the extended formulas, which lie outside the regime of validity of the Boltzmann treatment. For the third point, the changes are confined to the text of Secs.~III~B and III~C, together with the new explicit expression for $h_2$, which follows from the existing definitions of $h_2$, the BC and the OMM. No equation of the solution is changed, since the ansatz and the equations for $\lambda$, $a$ and $b$ hold for the full $h_2$ and rely only on its parity. The numerical results are therefore not affected, and neither are the conclusions on the odd-in-$B_z$ terms and on the absence of charge pumping. The numerical results for the HSM and for the VNR were obtained with the full expression for $h$ and the full Fermi momentum, without any expansion in $B_z$ and, for the VNR, without any expansion in $\kappa/k_0$. In the HSM figures, $|B_z|\le50\ {\rm eV}^2$ and the smallest chemical potential is $\mu=0.01$ for $v_0=0.0004$, so that $|\zeta_{\rm h}|\le0.08$ and the retained root is real throughout. In the VNR figure, $|B_z|\le100\ {\rm eV}^2$ for $v_0=0.0004$ and $k_0=200$ eV, so that $|\zeta_{\rm v}|\le0.01$ for $\mu=0.01$.
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{List of changes}
+
+All the additions are marked in the manuscript with the colour red. In response to the first point, the notation $|\bs B|$ has been replaced by $B_z$ in the Introduction (two places), in Sec.~III (two places) and in the Summary. In response to the second point, Sec.~III~D has been rewritten. The statement that the Boltzmann equation is applicable only for low $|B_z|$ has been added, and the regime of validity is stated in terms of $\zeta_{\rm h}$ and $\zeta_{\rm v}$. The changes of the Fermi surface of the HSM and the VNR are qualified as features of the extended formulas. The expected square-root branch point of $\delta\sigma_{zz}$ and the statement on finite temperature have been removed, and the statements on the integrability of the BC divergence and on the semiclassical regime have been replaced by statements that follow from the calculation. In response to the third point, the statement on the harmonic content of $h$ in Secs.~III~B and III~C has been replaced by the explicit expression for $h_2$, its expansion in powers of $B_z$, and a parity argument that does not rely on the harmonic content. The statements on the source of $a$ and $a_\chi$ now refer to the weighted projection of $h$ onto $\cos\gamma$, and the role of the number constraint in the even sector has been stated explicitly.
+
+\end{document}
