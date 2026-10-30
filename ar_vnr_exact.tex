@@ -45,7 +45,6 @@
 \usepackage{dsfont}
 \usepackage{float, mathrsfs}
 \newcommand{\bs}[1]{\boldsymbol{#1}}
-\DeclareMathOperator{\arctanh}{arctanh}
 
 %========================= change marking (referee round 2) ==================
 %\newcommand{\cadd}[1]{\textcolor{red}{#1}}
@@ -72,7 +71,7 @@
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract} 
-We investigate the longitudinal magnetoelectric conductivity and nonlinear electrochemical response (ECR) of three-dimensional nodal-ring semimetals, including vortex nodal-rings (VNRs) and $\mathcal{PT}$-symmetric nodal-rings (PTNRs), together with three-band Hopf semimetals (HSMs), using the semiclassical Boltzmann formalism. The nodal rings of the VNRs and PTNRs lie in the $k_z=0$ plane, whereas the nodal points of HSMs host isolated Berry-curvature (BC) dipoles with axes along the $k_z$ direction. In VNRs, such dipoles may be viewed as forming a continuous distribution along the nodal ring, connecting the two classes of systems. For collinear electric and magnetic ($\mathcal{B}$) fields along the anisotropy axis $\boldsymbol {\hat{z}}$, the linear response is computed exactly and displays odd powers of $B_z$ for a single ring or node. For a two-node HSM with oppositely oriented BC-dipole axes, these odd terms cancel in the sum. We analyse the nonlinear ECR, described by third-rank response tensors that relate the current to the combined action of an electric field and a chemical-potential gradient. The surviving tensor components are determined by the tilt direction of the band structure, and we obtain explicit results for simultaneous in-plane and axial tilts. A comparison of the three systems reveals a close correspondence between the responses of VNRs and HSMs, while PTNRs behave qualitatively differently. We attribute these similarities and differences to the topology of the BC field, namely dipole-like sources in VNRs and HSMs versus the ring-confined BC structure of PTNRs.
+We investigate the longitudinal magnetoelectric conductivity and nonlinear electrochemical response (ECR) of three-dimensional nodal-ring semimetals, including vortex nodal-rings (VNRs) and $\mathcal{PT}$-symmetric nodal-rings (PTNRs), together with three-band Hopf semimetals (HSMs), using the semiclassical Boltzmann formalism. The nodal-rings of the VNRs and PTNRs lie in the $k_z=0$ plane, whereas the nodal points of HSMs host isolated Berry-curvature (BC) dipoles with axes along the $k_z$ direction. In VNRs, such dipoles may be viewed as forming a continuous distribution along the nodal-ring, connecting the two classes of systems. For collinear electric and magnetic ($\mathcal{B}$) fields along the anisotropy axis $\boldsymbol {\hat{z}}$, the linear response is computed exactly and displays odd powers of $B_z$ for a single ring or node. For a two-node HSM with oppositely-oriented BC-dipole axes, these odd terms cancel in the sum. We analyse the nonlinear ECR, described by third-rank response tensors that relate the current to the combined action of an electric field and a chemical-potential gradient. The surviving tensor components are determined by the tilt direction of the bandstructure, and we obtain explicit results for simultaneous in-plane and axial tilts. A comparison of the three systems reveals a close correspondence between the responses of VNRs and HSMs, while PTNRs behave qualitatively differently. We attribute these similarities and differences to the topology of the BC field, namely dipole-like sources in VNRs and HSMs versus the ring-confined BC structure of PTNRs.
 \end{abstract}
 %%%%%%%%%%%%%%%%%%%%
 % Berry phase; topology; zero Chern number; vortex nodal-ring; Hopf semimetal; Berry-curvature dipole
@@ -84,7 +83,7 @@ We investigate the longitudinal magnetoelectric conductivity and nonlinear elect
 %========================= BODY OF THE ARTICLE =========================
 \section{Introduction}
 
-Investigations of transport properties in three-dimensional (3d) semimetals have catapulted into prominence as they often reflect the underlying topological features of the Brillouin zone (BZ). When the BZ harbours symmetry-protected band-crossings in the momentum space (denoted here by $\bs k \equiv \lbrace k_x, k_y, k_z \rbrace $), the resulting nodal points~\cite{burkov11_Weyl, yan17_topological, bernevig, grushin-multifold} or curves~\cite{balents-nodal, vortex-nrsm} can be characterised by some topological invariant or index. Our efforts are mainly directed at identifying meaningful response which will capture this invariant unambiguously. The topological properties often arise as a nontrivial Berry curvature (BC)~\cite{xiao_review, sundaram99_wavepacket,graf-Nband, graf_thesis}, sourced by the Berry phases of the associated Bloch bands meeting at the nodes of a semimetal. Starting with the pioneering example of the Weyl semimetals (WSMs), the most important telltale signatures of the BC are the intrinsic anomalous-Hall effect~\cite{haldane04_berry,goswami13_axionic, burkov14_anomolous} and the appearance of longitudinal and transverse conductivity in planar-Hall configurations \cite{zhang16_linear, chen16_thermoelectric, nandy_2017_chiral, ips-mwsm-floquet, amit_magneto, das20_thermal, ips-kush-review, ips-ruiz, ips-tilted, ips-rsw-ph, ips-shreya, ips-spin1-ph, timm, ips-exact-spin1, ips-exact-rsw, ips-exact-kwn, phe_nlsm, ips-nlsm-ph, ips-gnr-strain}. Here, we will focus on a two-band system containing a nodal-loop in the form of a circle [see Fig.~\ref{figfs}(a)], thus carrying a representation of the pseudospin-1/2 quantum number (just like the WSMs). Generically, their effective Hamiltonian can be represented as $\boldsymbol{d} (\bm k) \cdot \boldsymbol \sigma$, where $ \boldsymbol{\sigma} = \left\lbrace \sigma_x,\sigma_y,\sigma_z\right \rbrace $ is the vector comprising the three Pauli matrices as its three components and defining the $2\times 2$ matrix-operators in the pseudospin space. The 3-component vector $\bs d$ encodes the pseudospin structure of the two-component spinors representing the two Bloch bands. For a typical nodal-loop protected by $\mathcal P \mathcal T$-symmetry (where $\mathcal P$ and $\mathcal T$ represent the operators implementing the inversion and time-reversal symmetries, respectively), which we will refer to as a $\mathcal P \mathcal T$-symmetric nodal-ring (PTNR), the BC is nonzero only along the loop itself, vanishing identically elsewhere.\footnote{Adding a mass term of magnitude $\Delta $, for example generated by spin-orbit coupling, makes it gapped. This induces a nonvanishing BC $\propto \Delta$ which happens to have only in-plane components \cite{schnyder_nodal, yang1, yang_review_nlsm, chen_nlsm, ips-magnus, flores, phe_nlsm, claudia_nlsm, enke, ips-nlsm-ph, ips-gnr-strain}.}
+Investigations of transport properties in three-dimensional (3d) semimetals have catapulted into prominence as they often reflect the underlying topological features of the Brillouin zone (BZ). When the BZ harbours symmetry-protected band-crossings in the momentum space (denoted here by $\bs k \equiv \lbrace k_x, k_y, k_z \rbrace $), the resulting nodal points~\cite{burkov11_Weyl, yan17_topological, bernevig, grushin-multifold} or curves~\cite{balents-nodal, vortex-nrsm} can be characterised by some topological invariant or index. Our efforts are mainly directed at identifying meaningful response which will capture this invariant unambiguously. The topological properties often arise as a nontrivial Berry curvature (BC)~\cite{xiao_review, sundaram99_wavepacket,graf-Nband, graf_thesis}, sourced by the Berry phases of the associated Bloch bands meeting at the nodes of a semimetal. Starting with the pioneering example of the Weyl semimetals (WSMs), the most important telltale signatures of the BC are the intrinsic anomalous-Hall effect~\cite{haldane04_berry,goswami13_axionic, burkov14_anomolous} and the appearance of longitudinal and transverse conductivity in planar-Hall configurations \cite{zhang16_linear, chen16_thermoelectric, nandy_2017_chiral, ips-mwsm-floquet, amit_magneto, das20_thermal, ips-kush-review, ips-ruiz, ips-tilted, ips-rsw-ph, ips-shreya, ips-spin1-ph, timm, ips-exact-spin1, ips-exact-rsw, ips-exact-kwn, li2023_planar, ips-nlsm-ph, ips-gnr-strain}. Here, we will focus on a two-band system containing a nodal-loop in the form of a circle [see Fig.~\ref{figfs}(a)], thus carrying a representation of the pseudospin-1/2 quantum number (just like the WSMs). Generically, their effective Hamiltonian can be represented as $\boldsymbol{d} (\bm k) \cdot \boldsymbol \sigma$, where $ \boldsymbol{\sigma} = \left\lbrace \sigma_x,\sigma_y,\sigma_z\right \rbrace $ is the vector comprising the three Pauli matrices as its three components and defining the $2\times 2$ matrix-operators in the pseudospin space. The 3-component vector $\bs d$ encodes the pseudospin structure of the two-component spinors representing the two Bloch bands. For a typical nodal-loop protected by $\mathcal P \mathcal T$-symmetry (where $\mathcal P$ and $\mathcal T$ represent the operators implementing the inversion and time-reversal symmetries, respectively), which we will refer to as a $\mathcal P \mathcal T$-symmetric nodal-ring (PTNR), the BC is nonzero only along the loop itself, vanishing identically elsewhere.\footnote{Adding a mass term of magnitude $\Delta $, for example generated by spin-orbit coupling, makes it gapped. This induces a nonvanishing BC $\propto \Delta$ which happens to have only in-plane components \cite{schnyder_nodal, yang1, yang_review_nlsm, chen_nlsm, ips-magnus, flores, li2023_planar, claudia_nlsm, enke, ips-nlsm-ph, ips-gnr-strain}.}
 %%%%%%%%%%%%%%
 This singular-natured BC is characterised by a nonvanishing Zak phase \cite{schnyder_nodal, biao_nodal, zak_nodal, ips-nlsm-ph}. However, in the absence of both these symmetries, a different type of nodal-ring may exist, dubbed as the vortex nodal-ring (VNR) \cite{vortex-nrsm}, which does harbour a nonvanishing nonsingular BC away from the nodal-loop. The nomenclature is related to the fact that the vector field representing $\boldsymbol d (\bf k)$ takes a vortex-like or smoke-ring texture in the momentum space [cf. Fig.~\ref{figfs}(a)].
 
@@ -94,21 +93,20 @@ This singular-natured BC is characterised by a nonvanishing Zak phase \cite{schn
 \includegraphics[width=0.5 \textwidth]{spin-Om}  }
 \subfigure[]{\includegraphics[width=0.2 \textwidth]{disp-weyl} \hspace{ 1 cm}
 \includegraphics[width=0.5 \textwidth]{spin-Om-weyl}  }
-\caption{\label{figfs} (a) We show the unique features of a VNR in terms of its
-dispersion against the $k_x k_y $-plane showing two bands crossing along a circle (highlighted in green), setting $k_z = 0 $, and the profile of the vector fields representing the pseudospin and BC. (b) For the sake of comparison with a Weyl node, we show its dispersion (with the green dot denoting the nodal-point), and the pseudospin and BC distributions. The vector fields for each case have been drawn in the vicinity of a section of the Fermi surface for the positive-energy band. The BC of the VNR forms a dipole in every cross-section of the nodal ring, whereas the BC of a Weyl node is a monopole.}
+\caption{\label{figfs} Distinctions between a VNR and a WSM: (a) We show the unique features of a VNR in terms of its dispersion against the $k_x k_y $-plane showing two bands crossing along a circle (highlighted in green), setting $k_z = 0 $, and the profile of the vector fields representing the pseudospin and BC. (b) For the sake of comparison with a Weyl node, we show its dispersion (with the green dot denoting the nodal-point), and the pseudospin and BC distributions. The vector fields for each case have been drawn in the vicinity of a section of the Fermi surface for the positive-energy band. The BC of the VNR forms a dipole in every cross-section of the nodal-ring, whereas the BC of a Weyl node is a monopole.}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%
 
 
 The magnitude of the BC-monopole carried by a nodal point is synonymous with the Chern number of any closed 2d surface (in momentum space) containing the node inside, giving us the associated topological invariant in terms of the BC-monopole charge. Beyond this simple picture, we are also now aware of more possibilities of the behaviour of the BC where the nodes act as sources of higher-order poles \cite{graf-hopf, hopf2, hopf3,  ips-fa, ips-fa-lett}, which include ideal dipoles, quadrupoles, and so on. They can be thought of as the momentum-space analogues of such objects familiar from multipole expansions of electromagnetism. Here, we will consider three-band massless Hopf semimetals (HSMs), which host BC-dipoles. In an HSM, such a dipole sits as an isolated object at each nodal point, whereas in a VNR the dipoles are not confined to a point but can instead be visualised as a continuous distribution spread along the nodal-ring itself. 
-The connection between the two dipolar systems is made explicit in Fig.~\ref{figbc}. In the plane spanned by $\kappa_\perp$ and $k_z$ at fixed $\phi$, the BC of the VNR has the angular structure $k_z\,\bs k$ of the HSM, with the radial dependence of the HSM replaced by the one set by the distance from the ring. The VNR can therefore be viewed as a one-parameter family, labelled by $\phi$, of such dipoles. Since the dispersions of the VNR and the PTNR coincide (cf. Fig.~\ref{figcyclide}), the similarity of the response-characteristics of the VNR and the HSM, as opposed to the PTNR, can be traced to the BC texture and not to the shapes of the FSs.
+The connection between the two dipolar systems is made explicit in Fig.~\ref{figbc}. In the plane spanned by $\kappa_\perp$ and $k_z$ at fixed $\phi$, the BC of the VNR has the angular structure $k_z\,\bs k$ of the HSM, with the radial dependence of the HSM replaced by the one set by the distance from the ring. The VNR can therefore be viewed as a one-parameter family, labelled by $\phi$, of such dipoles. Since the dispersions of the VNR and the PTNR coincide (cf. Fig.~\ref{figcyclide}), the similarity of the response-characteristics of the VNR and the HSM, as opposed to the PTNR, can be traced to the BC texture and not to the shapes of the Fermi surfaces.
 
-While a nonzero BC-vector field is the first important topological property to affect transport (see Fig.~\ref{figbc} for a comprehensive illustration), it is accompanied by another vector field called the orbital magnetic moment (OMM), sourced by the same Berry phase \cite{xiao_review, sundaram99_wavepacket}, and also affects transport involving a magnetic field \cite{ips-ruiz, ips-tilted, ips-rsw-ph, ips-shreya, ips-spin1-ph,timm, ips-exact-spin1, ips-exact-rsw, ips-exact-kwn,  ips-nlsm-ph}. While topology-induced response has been studied quite widely for the PTNRs \cite{schnyder_nodal, yang1, yang_review_nlsm, chen_nlsm, ips-magnus, flores, phe_nlsm, claudia_nlsm, enke, ips-nlsm-ph}, such characteristics have not been explored for the VNRs and BC-dipole nodal points, which we undertake in this paper. In particular, we will perform an analytical computation of the linear magnetoelectric conductivity in planar-Hall set-ups, similar to what was studied in our earlier work involving PTNRs \cite{ips-nlsm-ph}. Such set-ups refer to the application of static and uniform electric ($\bs E $) and magnetic ($\bs B$) fields, where $\bs B $ is not necessarily perpendicular to $\bs E $. Rather than resorting to the relaxation-time approximation (RTA) used in that earlier work, we solve the linearised Boltzmann equation for the collinear configuration exactly, and find that the resulting magnetoconductivity for the VNR and the HSM contains an additional linear-in-$B_z$ term (here $B_z$ is the component of $\bs B$ along $\hat{\bs z}$), absent for BC-monopole and PTNR nodes, which we trace directly to the absence of standalone time-reversal symmetry in these two dipolar models. We extend this analysis to a two-node HSM, whose conjugate nodes carry oppositely oriented BC-dipole axes. The RTA treatment of the VNR and the HSM, which also finds the odd-in-$B_z$ terms and the vanishing of the internode conductivity of the HSM, is presented in Ref.~\cite{ips-firdous-vnr}. The exact numerical solution shows that the odd-in-$B_z$ terms of the two nodes cancel in the sum, and that the internode scattering acts as an additional channel that only modifies the slope of the response of each node. The net response is even in $B_z$ and, for the chosen parameters, much smaller than that of a single node.
+While a nonzero BC-vector field is the first important topological property to affect transport (see Fig.~\ref{figbc} for a comprehensive illustration), it is accompanied by another vector field called the orbital magnetic moment (OMM), sourced by the same Berry phase \cite{xiao_review, sundaram99_wavepacket}, and also affects transport involving a magnetic field \cite{ips-ruiz, ips-tilted, ips-rsw-ph, ips-shreya, ips-spin1-ph,timm, ips-exact-spin1, ips-exact-rsw, ips-exact-kwn,  ips-nlsm-ph}. While topology-induced response has been studied quite widely for the PTNRs \cite{schnyder_nodal, yang1, yang_review_nlsm, chen_nlsm, ips-magnus, flores, li2023_planar, claudia_nlsm, enke, ips-nlsm-ph}, such characteristics have not been explored for the VNRs and BC-dipole nodal points, which we undertake in this paper. In particular, we will perform an analytical computation of the linear magnetoelectric conductivity in planar-Hall set-ups, similar to what was studied in our earlier work involving PTNRs \cite{ips-nlsm-ph}. Such set-ups refer to the application of static and uniform electric ($\bs E $) and magnetic ($\bs B$) fields, where $\bs B $ is not necessarily perpendicular to $\bs E $. Rather than resorting to the relaxation-time approximation (RTA) used in that earlier work, we solve the linearised Boltzmann equation for the collinear configuration exactly, and find that the resulting magnetoconductivity for the VNR and the HSM contains an additional linear-in-$B_z$ term (here $B_z$ is the component of $\bs B$ along $\hat{\bs z}$), absent for BC-monopole and PTNR nodes, which we trace directly to the absence of standalone time-reversal symmetry in these two dipolar models. We extend this analysis to a two-node HSM, whose conjugate nodes carry oppositely-oriented BC-dipole axes. The RTA treatment of the VNR and the HSM, which also finds the odd-in-$B_z$ terms and the vanishing of the internode conductivity of the HSM, is presented in Ref.~\cite{ips-firdous-vnr}. The exact numerical solution shows that the odd-in-$B_z$ terms of the two nodes cancel in the sum, and that the internode scattering acts as an additional channel that only modifies the slope of the response of each node. The net response is even in $B_z$ and, for the chosen parameters, much smaller than that of a single node.
 
 Nonlinear transport under the effect of an external electric field (or temperature gradient) and the gradient of the chemical potential constitutes a response of electrochemical nature \cite{ips-shreya}. Here, we dub the associated electrical conductivity tensor as the electrochemical response (ECR). Since the Chern number is zero for the systems under consideration in this paper, several of these coefficients vanish, in contrast to nodal points harbouring BC-monopoles. Even so, we find that nonzero coefficients emerge in the tilted cases, offering a nontrivial characterisation of the underlying topology. We further show that the tilt direction alone dictates which components of the ECR survive, and that this selection rule sets the PTNR apart from the VNR and the HSM: since its BC is confined entirely to the nodal-ring, a tilt along the ring's own axis leaves the ring pinned at zero energy and yields no response whatsoever, in contrast to the VNR and the HSM, where the same axial tilt activates a distinct set of diagonal ECR components. For simultaneous in-plane and axial tilts, we derive explicit expressions for the VNR and the HSM, which contain the single-tilt results as limiting cases and show that the two tilts interfere only at third order.
 
 
-The paper is organised as follows: In Sec.~\ref{secmodels}, we provide detailed descriptions of the effective models of the nodal-ring and BC-dipole semimetals, whose transport properties we are interested in. Sec.~\ref{secexact} is devoted to deriving the longitudinal magnetoelectric conductivity for a single VNR, a single BC-dipole nodal point, and a two-node HSM with oppositely oriented dipole axes, incorporating exact solutions. We beef up our efforts toward transport-characterisation by considering nonlinear response (in the form of ECR) in Sec.~\ref{secnonlinear}. Finally, we end with a summary and outlook in Sec.~\ref{secsum}. The appendices explain some steps to perform the integrals involving tilted nodal-rings, and provide the intermediate steps of the calculation for the combined in-plane and axial tilt.
+The paper is organised as follows. Sec.~\ref{secmodels} describes the effective models of the three systems. Sec.~\ref{secexact} derives the exact longitudinal magnetoelectric conductivity for a single VNR, a single BC-dipole nodal point, and a two-node HSM with oppositely-oriented dipole axes. Sec.~\ref{secnonlinear} treats the nonlinear ECR, and Sec.~\ref{secsum} gives a summary and outlook. Appendix~\ref{appcyclides} covers the integrals for tilted nodal-rings, Appendix~\ref{appcomb} the combined in-plane and axial tilts, Appendix~\ref{appsing} the singularity of the collision matrix, and Appendix~\ref{appcont} the internode transfer rate.
 
 
 All our expressions in the paper are written using the natural units. Basically, this implies that the reduced Planck's constant ($\hbar $), the speed of light ($c$), and the Boltzmann constant ($k_B $) are each set to unity. The magnitude of electric charge, $e$, has no units and also equals unity in the natural units. However, for tracking the appearance of the electric charge, we will retain $e$ in our expressions. 
@@ -216,7 +214,7 @@ a Zeeman-like term. Therefore, the shift in energy caused by the OMM is captured
 The OMM-induced parts are the same for both the bands and, hence, we have not attached any $s$ index to them.
 The BC can be imagined to be caused by a continuous distribution of ideal dipoles along the nodal-ring, as seen from Figs.~\ref{figbc}(c) and \ref{figfs}(a).
 
-We will work in the $T \rightarrow 0 $ limit, such that the Fermi-Distribution function, denoted as $f_0 (\mathcal E) $ for a band with dispersion $E$, goes to $\Theta (\mu- \mathcal E)$. Hence, its derivative with respect to $\mathcal E$ goes as $\partial_\mathcal E f_0 \rightarrow -\, \delta (\mathcal E - \mu )$. We will use the shorthand-notation of $\int_k \cdots \equiv \int \frac{ d^3 \bs k}{(2\, \pi)^3 }  \cdots $ for the $\bs k$-integrals. While performing these integrals, we will resort to using the toroidal coordinates, defined as follows:
+We will work in the $T \rightarrow 0 $ limit, such that the Fermi-Dirac-distribution function, denoted as $f_0 (\mathcal E) $ for a band with dispersion $E$, goes to $\Theta (\mu- \mathcal E)$. Hence, its derivative with respect to $\mathcal E$ goes as $\partial_\mathcal E f_0 \rightarrow -\, \delta (\mathcal E - \mu )$. We will use the shorthand-notation of $\int_k \cdots \equiv \int \frac{ d^3 \bs k}{(2\, \pi)^3 }  \cdots $ for the $\bs k$-integrals. While performing these integrals, we will resort to using the toroidal coordinates, defined as follows:
 \begin{align}
 \label{eqtrsf}
 k_x = \left( k_0+ \kappa_\perp\right) \cos \phi  \,, \quad
@@ -229,7 +227,7 @@ The Jacobian of the transformation is given by
 \begin{align}
 J =   \kappa \, k_\perp \,.
 \end{align}
-In terms of the toroidal coordinates, $k_0$ represents the major radius (i.e., the distance between a point on the nodal-ring and the center of the torus), $\kappa $ denotes the minor radius (i.e., the radius of the cross-section of the torus). The angular coordinates, $\phi $ and $\gamma $, span over $ \in [0, 2 \pi)$, representing rotation around the torus's axis of revolution and rotation around the centre of a cross-section, respectively.
+In terms of the toroidal coordinates, $k_0$ represents the major radius (i.e., the distance between a point on the nodal-ring and the centre of the torus), $\kappa $ denotes the minor radius (i.e., the radius of the cross-section of the torus). The angular coordinates, $\phi $ and $\gamma $, span over $  [0, 2 \pi)$, representing rotation around the torus's axis of revolution and rotation around the centre of a cross-section, respectively.
 % https://en.wikipedia.org/wiki/Toroidal_and_poloidal_coordinates
 In our calculations for conductivity, we will consider applying a non-negative value of the chemical potential, $\mu$. Therefore, for $\eta = 0$, only the $s=2$ band will contribute. 
 
@@ -238,24 +236,24 @@ In our calculations for conductivity, we will consider applying a non-negative v
 \begin{figure*}[t!]
 \subfigure{\includegraphics[width= 0.75 \textwidth]{cyclides}}
 \subfigure{\includegraphics[width= 0.75 \textwidth]{cyclides2}}
-\caption{\label{figcyclide} On introducing tilt, the Fermi surfaces of nodal-rings take the forms of different kinds of cyclides, which depend on the values of $\mu$ and $\eta \, k_0$. The red and cyan colours depict the $s=1$ and $s=2$ bands, respectively. While (a) illustrates the full 2d Fermi surfaces, (b) shows the corresponding projections on the $k_x k_y$-plane for $k_z = 0 $. The dotted black circle represents the original PTNR or VNR at $\mu = \eta = 0$ for the sake of reference. The same cyclides arise for the VNR and the PTNR, since the two share the same dispersion.}
+\caption{\label{figcyclide} On introducing tilt, the Fermi surfaces of nodal-rings take the forms of different kinds of cyclides, which depend on the values of $\mu$ and $\tilde \eta = v_0\, k_0\,\eta_x $. The red and cyan colours depict the $s=1$ and $s=2$ bands, respectively. While the upper panel illustrates the full 2d Fermi surfaces, the lower panel shows the corresponding projections on the $k_x k_y$-plane for $k_z = 0 $. The dotted black circle represents the original PTNR or VNR at $\mu = \eta_x = 0$ for the sake of reference. The same cyclides arise for the VNR and the PTNR, since the two share the same dispersion.}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%
 
 
 
-For the tilted case, some extra care needs to be taken. When the tilting is with respect to the $k_x k_y $-plane, the ring-toroid structure can get drastically modified. Let us choose this in-plane tilting with respect to the $k_x$-axis, without any loss of generality. Depending on the relative values of $\mu $ and $\tilde \eta \equiv  v_0\, k_0\, \eta_x$.  For nonzero $\tilde \eta$, there are several possibilities \cite{ahn-tilted-nl} corresponding to (a) ring-cyclide: $ 0< \tilde \eta < \mu $; (b) horn-cyclide formed from the $s=2 $ band only: $\mu> 0 $ and $ \tilde \eta = \mu $; (c) symmetric horn-cyclide formed by both the bands: $\mu =0 $ and $ \tilde \eta >0 $; and (d) (asymmetric) horn-cyclide formed by both the bands: $ 0 < \mu < \tilde \eta $. For visual aid, Fig.~\ref{figcyclide} depicts the $\phi$-dependence of these distinct-shaped cyclides.
+For the tilted case, some extra care needs to be taken. When the tilting is with respect to the $k_x k_y $-plane, the ring-toroid structure can get drastically modified. Let us choose this in-plane tilting with respect to the $k_x$-axis, without any loss of generality. Depending on the relative values of $\mu $ and $\tilde \eta \equiv  v_0\, k_0\, \eta_x$, there are several possibilities \cite{ahn-tilted-nl} corresponding to (a) ring-cyclide: $ 0< \tilde \eta < \mu $; (b) horn-cyclide formed from the $s=2 $ band only: $\mu> 0 $ and $ \tilde \eta = \mu $; (c) symmetric horn-cyclide formed by both the bands: $\mu =0 $ and $ \tilde \eta >0 $; and (d) (asymmetric) horn-cyclide formed by both the bands: $ 0 < \mu < \tilde \eta $. For visual aid, Fig.~\ref{figcyclide} depicts the $\phi$-dependence of these distinct-shaped cyclides.
 %%%%%%%%%%%%%%%%%%%%%
 In the language of Eqs.~\eqref{eqtrs} and \eqref{eqtrsf}, we have $\epsilon_k =  v_0 \, \kappa $ and
 \begin{align} 
 &\delta (\varepsilon_s -\mu)  \equiv 
-\delta \Big (  (-1)^s\,v_0 \,\kappa + \eta \,v_0\, (k_0 + \kappa \cos \gamma) \cos \phi -\mu \Big )
+\delta \Big (  (-1)^s\,v_0 \,\kappa + \eta_x \,v_0\, (k_0 + \kappa \cos \gamma) \cos \phi -\mu \Big )
 = \frac{\delta \Big ( \kappa - \frac{\mu - \tilde \eta \cos \phi } { v_0\,\zeta_s } \Big )}
 { v_0 \,|\zeta_s| } \,,
 %%%%%%%%%%%%%%
 \nn & \text{where }
-\zeta_s = (-1)^s  + \eta  \cos \gamma \cos \phi
-\text{ and } \tilde \eta = \eta\,v_0\,k_0\,.
+\zeta_s = (-1)^s  + \eta_x  \cos \gamma \cos \phi
+\text{ and } \tilde \eta = \eta_x \,v_0\,k_0\,.
 \end{align}
 Depending on the relative values of $\mu$ and $ \tilde \eta $, both the bands may contribute, and the valid range of $\phi $ is determined from the points where the Fermi-momentum vanishes, viz. $\kappa = 0 \Rightarrow  \cos \phi  =  \mu /\tilde \eta $. More details can be found in Appendix~\ref{appcyclides}.
 
@@ -312,7 +310,7 @@ where $\bs B$, the tilt-vector $\bs\eta$, and the intrinsically time-reversal-od
 with $R$ determined by the transformation of the current operator under $\Xi$. Unlike the ordinary Onsager--Casimir relation, which involves interchange of indices together with full reversal of the time-reversal-odd parameters, Eq.~\eqref{eq:theta_covariance_vnr} is a spatial covariance relation associated with the surviving partial-reversal symmetry. This distinction is essential since the absence of ordinary $T$ does not invalidate the generalised parameter-reversal relation. In fact, the weaker $\Xi$ covariance permits response structures, such as the odd-in-$B_z$ contribution to $\sigma_{zz}$ and the zero-field tilt-driven ECR discussed in Secs.~\ref{secexact} and \ref{secnonlinear}, that would be constrained differently in a fully time-reversal-symmetric system.
 
 
-To summarise the logical relation between the two notions, the time-reversal symmetry of the bare Hamiltonian and the parameter-reversal relation obeyed by the transport coefficients are distinct statements. The former is a property of a fixed Hamiltonian, namely the existence of an antiunitary operator $T$ with $T\,\mathcal H(\bs k)\,T^{-1}=\mathcal H(-\bs k)$. The latter follows from the microscopic reversibility of the full dynamics and relates the conductivity of a system to that of its time-reversed partner, in which every time-reversal-odd parameter is reversed. In the Boltzmann response, these parameters are $\bs B$, $\bs\eta$, $\bs\Omega_s$ and $\bs m_s$, which gives Eq.~\eqref{eq:generalized_onsager}. When $\mathcal H$ is itself time-reversal invariant, as for the PTNR, the reversal of $\bs\Omega_s$ and $\bs m_s$ is equivalent to the original system, and Eq.~\eqref{eq:generalized_onsager} closes on a single system. For the diagonal component it then reduces to the familiar Onsager-Casimir form $\sigma_{zz}(B_z)=\sigma_{zz}(-B_z)$, which forbids odd powers of $B_z$. In a single VNR or a single HSM node, the reversal of $\bs\Omega_s$ and $\bs m_s$ flips the orientation of the BC dipole and therefore produces a different system. Eq.~\eqref{eq:generalized_onsager} then relates $\sigma_{zz}$ of the system to that of its dipole-reversed partner and not to itself, so that no constraint on the parity of $\sigma_{zz}$ in $B_z$ results. The surviving antiunitary symmetry $\Xi$ yields only the covariance relation of Eq.~\eqref{eq:theta_covariance_vnr}, which reduces to an identity for $\bs E\parallel\bs B\parallel\hat{\bs z}$. Whether odd powers of $B_z$ actually appear is then decided by the parity of the integrand under $k_z\to-k_z$, as discussed in Sec.~\ref{secexact}. For a pair of nodes with oppositely oriented dipoles, the reversal of $\bs\Omega_s$ and $\bs m_s$ exchanges the two nodes and maps the pair onto itself, so that the net $\sigma_{zz}$ is again even in $B_z$.
+To summarise the logical relation between the two notions, the time-reversal symmetry of the bare Hamiltonian and the parameter-reversal relation obeyed by the transport coefficients are distinct statements. The former is a property of a fixed Hamiltonian, namely the existence of an antiunitary operator $T$ with $T\,\mathcal H(\bs k)\,T^{-1}=\mathcal H(-\bs k)$. The latter follows from the microscopic reversibility of the full dynamics and relates the conductivity of a system to that of its time-reversed partner, in which every time-reversal-odd parameter is reversed. In the Boltzmann response, these parameters are $\bs B$, $\bs\eta$, $\bs\Omega_s$ and $\bs m_s$, which gives Eq.~\eqref{eq:generalized_onsager}. When $\mathcal H$ is itself time-reversal invariant, as for the PTNR, the reversal of $\bs\Omega_s$ and $\bs m_s$ is equivalent to the original system, and Eq.~\eqref{eq:generalized_onsager} closes on a single system. For the diagonal component it then reduces to the familiar Onsager--Casimir form $\sigma_{zz}(B_z)=\sigma_{zz}(-B_z)$, which forbids odd powers of $B_z$. In a single VNR or a single HSM node, the reversal of $\bs\Omega_s$ and $\bs m_s$ flips the orientation of the BC dipole and therefore produces a different system. Eq.~\eqref{eq:generalized_onsager} then relates $\sigma_{zz}$ of the system to that of its dipole-reversed partner and not to itself, so that no constraint on the parity of $\sigma_{zz}$ in $B_z$ results. The surviving antiunitary symmetry $\Xi$ yields only the covariance relation of Eq.~\eqref{eq:theta_covariance_vnr}, which reduces to an identity for $\bs E\parallel\bs B\parallel\hat{\bs z}$. Whether odd powers of $B_z$ actually appear is then decided by the parity of the integrand under $k_z\to-k_z$, as discussed in Sec.~\ref{secexact}. For a pair of nodes with oppositely-oriented dipoles, the reversal of $\bs\Omega_s$ and $\bs m_s$ exchanges the two nodes and maps the pair onto itself, so that the net $\sigma_{zz}$ is again even in $B_z$.
 
 Finally, a finite tilt modifies the unitary spatial symmetries. The $C_{\infty z}$ symmetry survives only for $\bs\eta\parallel\hat{\bs z}$, whereas the corresponding $v_0\eta_z k_z$ term breaks the $k_z\to-k_z$ mirror. Conversely, a tilt confined to the $k_xk_y$-plane preserves the $k_z$ mirror but breaks $C_{\infty z}$.
 
@@ -379,12 +377,13 @@ Similarly, the OMM is singular at the nodal-ring, expressed as
 = -\, e\,   v_0  \,\pi \, \delta(\kappa)\,\delta(\gamma) \,{\boldsymbol{\hat \phi}}\,.
 \end{align}
 %%%%%%%%%%%%%
-For evaluating some the conductivity expressions, we will need to use the expression of the cross-product of a vector, $\bs A$, with $\bs \Omega_s$. This turns out to be
+For evaluating some of the conductivity expressions, we will need to use the expression of the cross-product of a vector, $\bs A$, with $\bs \Omega_s$. This turns out to be
 \begin{align}
 \label{eqcross}
  \bs A \times \bs \Omega_s ({ \bs k})
-= (-1)^{s+1} \,\pi \, \delta(k_z)\,\delta(k_\perp-k_0)\,{\boldsymbol{\hat e}}_\phi
-= (-1)^s\, \pi \, \delta(k_z)\,\delta(k_\perp-k_0)
+ & =  (-1)^{s+1} \,\pi \, \delta(k_z)\,\delta(k_\perp-k_0)\,
+\bs A \times {\boldsymbol{\hat \phi}}
+\nn & = (-1)^s\, \pi \, \delta(k_z)\,\delta(k_\perp-k_0)
 \left \lbrace  A_z \cos \phi\,,  A_z \sin \phi\,, \, 
 -A_x \cos \phi - A_y \sin \phi \right \rbrace .
 \end{align}
@@ -404,7 +403,7 @@ also invariant under reflection through the $k_z=0$ plane,
 \end{align}
 because $\sigma_x$ leaves $d_x \propto (k_\perp-k_0)$ fixed while flipping the
 sign of $d_y \propto k_z$. Unlike the VNR and the HSM, the BC and OMM
-of the PTNR are $\delta$-function supported on the nodal ring, whereas the
+of the PTNR are $\delta$-function supported on the nodal-ring, whereas the
 Fermi surface at $\mu > 0$ lies away from the ring. The two supports therefore
 do not overlap, making the geometric contributions to $\sigma_{zz}$ vanish
 identically at $\mu > 0$. Consequently, the presence of odd-in-$B_z$ terms identified
@@ -440,7 +439,7 @@ mirror at the cost of the $C_{\infty z}$ symmetry.
 \subsection{Three-band Hopf semimetal}
 \label{sechopf}
 
-HSMs were introduced in Ref.~\cite{graf-hopf}, which host BC-dipoles and possess linearly-dispersing bands. We consider the simplest case with threefold-degenerate node, captured by the effective continuum Hamiltonian \cite{graf-hopf, hopf2, hopf3},
+HSMs have been introduced in Ref.~\cite{graf-hopf}, which host BC-dipoles and possess linearly-dispersing bands. We consider the simplest case with a threefold-degenerate node, captured by the effective continuum Hamiltonian \cite{graf-hopf, hopf2, hopf3},
 \begin{align}
 \label{eqbcd2}
 H_{h} =  v_0 \,(k_x \,\lambda_1 + k_y \,\lambda_2+ k_z\,\lambda_5 +{\bs \eta} \cdot {\bs k} \;\,\mathbb{I}_{3 \times 3})\,,
@@ -618,17 +617,16 @@ where $T $ is the temperature.
 While using $f_0$ in various equations, we will be suppressing its $\mu$- and $ T $-dependence for uncluttering of notations. Moreover, in what follows, we will restrict our calculations to the $ T = 0$ limit.
 
 
-\item $ I_{\text{coll}} [f_{\chi, s} ({\boldsymbol k}) ] $ symbolises the so-called \textit{collision integral}, which comprises the relevant scattering processes trying to relax $f_{\chi, s} ({\boldsymbol k})$ towards $f_0 (\xi_{\chi, s}({\boldsymbol k}))$. 
+\item $ I_{\text{coll}} [f_{\chi, s} ({\boldsymbol k}) ] $ symbolises the so-called collision integral, which comprises the relevant scattering processes trying to relax $f_{\chi, s} ({\boldsymbol k})$ towards $f_0 (\xi_{\chi, s}({\boldsymbol k}))$. 
 For point-scattering mechanisms,
 \begin{align}
 I_{\text{coll}} [f_{\chi, s}({\boldsymbol k})]
  = \sum \limits_{\tilde \chi, \tilde s}
 \int_{k'}
 \mathcal{M}^{\chi, \tilde \chi}_{ s, \tilde s} (\boldsymbol k,\boldsymbol k^\prime)
-\left[ f_{\tilde \chi , \tilde s} ( \boldsymbol k^\prime )  - f_{\chi, s} (\boldsymbol k) \right ] ,
+\left[ f_{\tilde \chi , \tilde s} ( \boldsymbol k^\prime )  - f_{\chi, s} (\boldsymbol k) \right ].
 \end{align}
-where $\int_k \equiv \int d^{3}  \boldsymbol k  \, {\mathcal D}^{-1}_{\tilde \chi, \tilde s} ({\boldsymbol k} )
-/ (2\,\pi)^3 $ denotes the three-dimensional integral in the momentum space, containing the modified phase-space factor due to the BC.
+%%%%%%%%%%%%%%%%
 Furthermore, for elastic and pseudospin-independent scattering, we have the simple expression of
 \begin{align}
 \mathcal{M}^{\chi, \tilde \chi}_{ s, \tilde s} (\boldsymbol k,\boldsymbol k^\prime) 
@@ -642,7 +640,7 @@ Furthermore, for elastic and pseudospin-independent scattering, we have the simp
 \end{align}
 %%%%%%%%%%%
 Here, $ \rho_{\rm imp}$ represents the impurity-concentration (acting as the scattering centres), $V$ denotes the system's volume, and
-$ |{\mathcal V} ^{\chi, \tilde \chi}_{ s, \tilde s} |^2 $ stands for the scattering-strength (which in general parametrise intraband, interband, intranode, and internode processes).
+$ |{\mathcal V} ^{\chi, \tilde \chi}_{ s, \tilde s} |^2 $ stands for the scattering-strength (which in general parametrises intraband, interband, intranode, and internode processes).
 
 \item We have parametrised the deviation of the quasiparticle-distribution from the equilibrium as
 $$\delta f_{\chi, s} (\boldsymbol {k}) = -\,	 e\, 	\frac{\partial  f_0 (\xi_{\chi, s}({\boldsymbol k})) }
@@ -688,15 +686,15 @@ Eq.~\eqref{eqvec} further reduces to
 \int d\gamma^\prime \, \frac{\mathcal J \left (k^\prime \right )
 \, {\mathcal D}^{-1}_{\tilde \chi, \tilde s} ({\boldsymbol k}^\prime)}
 {  \big | \partial \xi_{\chi, s}({\boldsymbol k}^\prime) /
- \partial \varrho^\prime  \big | }
+ \partial \mathfrak{R}^\prime  \big | }
 %%%%%%%
 \, {\mathcal T }^{\chi, \tilde \chi}_{ s, \tilde s} (\gamma, \gamma^\prime)
 \, {\Lambda}^z_{ \tilde \chi, \tilde s} (\mu, \gamma^\prime ) 
 \Big \vert_{ k^\prime = k_F^{ \tilde \chi, \tilde s} } \,.
 \end{align}
 %%%%%%%%%%%%%%%%%%%%%
-The factor $ \mathcal J $ arises as the Jacobian for switching to the toroidal or spherical-polar coordinates, depending on whether we are dealing with the nodal-rings or BC-dipole nodal-point. Here, $\varrho^\prime $ denotes whichever radial coordinate is being held fixed while $\gamma^\prime $ varies along the Fermi surface, viz. $\kappa^\prime $ for the nodal-rings and $k^\prime $ for the BC-dipole nodal points, so that the derivative $\big | \partial \xi_{\chi, s}(\boldsymbol k^\prime) / \partial \varrho^\prime \big |^{-1} $ arises from converting $ \delta \Big( \xi_{\tilde \chi , \tilde s } (\boldsymbol k^\prime) -\mu \Big) $ to
-$\delta (\kappa^\prime - k_F^{ \tilde \chi, \tilde s})$ (for the nodal-rings) or $\delta (k^\prime - k_F^{ \tilde \chi, \tilde s})$ (for the nodal points), with $k_F^{  \chi, s}$ parametrising the radius of the Fermi surface as measured from the gapless ring (i.e., the locus of the band-touching curve) or the band-touching point. As a final step to solve the still complicated-looking integro-differential equation is to parametrise ${\Lambda}^z_\chi (\mu,\gamma )$ by a meaningful ansatz. Since Eq.~\eqref{eqlambdamu} is linear in $ {\Lambda}^z_{\tilde \chi, \tilde s} (\mu,\gamma^\prime )$, the ansatz must be chosen such that the $\gamma^\prime$-integral of $ {\mathcal T }^{\chi, \tilde \chi}_{ s, \tilde s} (\gamma, \gamma^\prime) \, {\Lambda}^z_{\tilde \chi, \tilde s} (\mu,\gamma^\prime )$ reproduces only the harmonics already present in the ansatz, which will depend on the eigenspinors of the respective systems. This condition alone leaves an overall constant undetermined, since $\tau^{-1}_{\chi,s} (\mu,\gamma)$ itself lies within the span of these harmonics, so that a constant shift of $ {\Lambda}^z_{\chi, s} $ solves the homogeneous version of Eq.~\eqref{eqlambdamu}; this remaining freedom is precisely what the electron-number conservation, $\int_k \delta f_{\chi, s} (\boldsymbol k)=0$, fixes.
+The factor $ \mathcal J $ arises as the Jacobian for switching to the toroidal or spherical-polar coordinates, depending on whether we are dealing with the nodal-rings or BC-dipole nodal-point. Here, $\mathfrak{R}^\prime $ denotes whichever radial coordinate is being held fixed while $\gamma^\prime $ varies along the Fermi surface, viz. $\kappa^\prime $ for the nodal-rings and $k^\prime $ for the BC-dipole nodal points, so that the derivative $\big | \partial \xi_{\chi, s}(\boldsymbol k^\prime) / \partial \mathfrak{R}^\prime \big |^{-1} $ arises from converting $ \delta \Big( \xi_{\tilde \chi , \tilde s } (\boldsymbol k^\prime) -\mu \Big) $ to
+$\delta (\kappa^\prime - k_F^{ \tilde \chi, \tilde s})$ (for the nodal-rings) or $\delta (k^\prime - k_F^{ \tilde \chi, \tilde s})$ (for the nodal points), with $k_F^{  \chi, s}$ parametrising the radius of the Fermi surface as measured from the gapless ring (i.e., the locus of the band-touching curve) or the band-touching point. The final step in solving the still complicated-looking integro-differential equation is to parametrise ${\Lambda}^z_{\chi, s} (\mu,\gamma )$ by a meaningful ansatz. Since Eq.~\eqref{eqlambdamu} is linear in $ {\Lambda}^z_{\tilde \chi, \tilde s} (\mu,\gamma^\prime )$, the ansatz must be chosen such that the $\gamma^\prime$-integral of $ {\mathcal T }^{\chi, \tilde \chi}_{ s, \tilde s} (\gamma, \gamma^\prime) \, {\Lambda}^z_{\tilde \chi, \tilde s} (\mu,\gamma^\prime )$ reproduces only the harmonics already present in the ansatz, which will depend on the eigenspinors of the respective systems. This condition alone leaves an overall constant undetermined, since $\tau^{-1}_{\chi,s} (\mu,\gamma)$ itself lies within the span of these harmonics, so that a constant shift of $ {\Lambda}^z_{\chi, s} $ solves the homogeneous version of Eq.~\eqref{eqlambdamu}. This remaining freedom is precisely what the electron-number conservation, $\int_k \delta f_{\chi, s} (\boldsymbol k)=0$, fixes.
 The conductivity is then determined by the expression,
 \begin{align}
 \label{eqsigmazzexact}
@@ -730,7 +728,7 @@ obtained through numerics. We will consider the features for a single VNR and a 
 %%%%%%%%%%%
 
 
-Numerical solutions to the final equations will confirm the coexistence of odd powers of $B_z$ alongside the usual even powers of $B_z$ in the net conductivity. This is predictable based on physical arguments resting on two separate ingredients. The first is the ordinary Onsager--Casimir relation
+Numerical solutions to the final equations will confirm the coexistence of odd powers of $B_z$ alongside the usual even powers of $B_z$ in the net conductivity. This is predictable based on physical arguments resting on two separate ingredients. The first is that the ordinary Onsager--Casimir relation
 $\sigma_{zz}(\bs B)=\sigma_{zz}(-\bs B)$, which would forbid the odd
 term, does not hold here, because standalone time-reversal symmetry is
 absent in both models. It is replaced by the weaker $\Xi$-covariant
@@ -738,7 +736,7 @@ relation identified in Sec.~\ref{secmodels}. For the collinear
 configuration considered here, with $\bs B$ and $\bs\eta$ both directed
 along $\hat{\bs z}$, this relation reduces to an identity and imposes no
 constraint on the $B_z$-dependence of $\sigma_{zz}$. Odd powers of $B_z$
-are therefore symmetry-allowed. The second is whether such a
+are therefore symmetry-allowed. The second is that whether such a
 term actually appears is decided separately, by the parity of the
 momentum-space integrand under $k_z\to-k_z$. To establish the nonvanishing odd-in-$B_z$ response, it is sufficient to examine the parity of the integrand under the mirror operation $k_z\to -k_z$. For the collinear configuration dealt with here, both the Hamiltonian and the magnetic field are invariant under this transformation, ensuring that only terms that are even in $k_z$ survive the momentum integration.
 For a VNR or HSM, both $w^z_{\chi,s}\propto k_z$ and $(\bs\Omega_{\chi,s}\!\cdot\!\bs w_{\chi,s})$ are odd under $k_z\to -k_z$, the latter owing to the explicit $k_z$ factor in the BC [cf. Eqs.~\eqref{eqbcomm} and \eqref{eqbcommhopf}]. Their product is therefore even and contributes to $\sigma_{zz}$. The same parity structure persists for the OMM-induced terms, since $\varepsilon_m\propto B_z k_z^2$ is even in $k_z$. Consequently, the coefficients of odd powers of $B_z$ are symmetry-allowed and remain finite after angular integration. For a BC monopole, the situation is reversed. The isotropic BC does not supply the additional $k_z$ factor and $w^z_{\chi,s}(\bs\Omega_s\!\cdot\!\bs w_s)$ remains odd under $k_z\to -k_z$, vanishing upon integration over the mirror-symmetric Fermi surface. Likewise, the OMM correction $\varepsilon_m\propto B_z k_z/k^2$ is odd in $k_z$, causing the corresponding odd-in-$B_z$ contributions to disappear. The emergence of odd magnetoconductivity in the VNR and HSM thus follows directly from the dipolar $k_z$ texture of their BC and OMM, which restores the even parity required for a nonzero angular average.
@@ -771,8 +769,7 @@ The terms $\lambda+a\,\cos\gamma$ in the ansatz constitute the vertex correction
 
 In the diagrammatic language of the Kubo formalism, the bare vertex is dressed by a ladder of impurity lines. Within the Born approximation, each rung of the ladder is a single impurity line connecting $\bs k^\prime$ to $\bs k$, with the weight $\mathcal T_{2,2}(\gamma,\gamma^\prime)$. Summing the ladder to all orders yields the self-consistent equation for the dressed vertex, which is precisely Eq.~\eqref{eqlambdamu}. The overlap function plays the central role here, since it is the squared overlap of the spinors, and it encodes the matrix element of the impurity potential between the Bloch states at $\bs k$ and $\bs k^\prime$. It makes the scattering anisotropic, and the dependence on $\gamma$ and $\gamma^\prime$ through the harmonics of $\mathcal T_{2,2}$ determines which harmonics of $\Lambda^z_2$ are corrected. An overlap function that is even under the mirror operation $\gamma\to-\gamma$, which corresponds to $k_z\to-k_z$, gives no correction to a vertex that is odd under it, since the in-scattering integral of an odd function over a weight that is even then vanishes.
 
-The vertex correction therefore describes the fraction of the momentum, imparted by the electric field to the quasiparticles, that is retained through the scattering events, instead of being lost at each of them. In the RTA, the in-scattering term is dropped altogether, which amounts to assuming that the momentum is lost completely at every event. This approximation is exact only if the correction vanishes. The analogous distinction in the simplest case of an isotropic band is the one between the quantum lifetime and the transport time, where the factor $1-\cos\theta$ in the scattering rate accounts for the retained forward momentum. The RTA result corresponds to a vanishing vertex correction.
-Plugging in the ansatz in Eq.~\eqref{eqlambdamu} furnishes
+The vertex correction therefore describes the fraction of the momentum, imparted by the electric field to the quasiparticles, that is retained through the scattering events, instead of being lost at each of them. In the RTA, the in-scattering term is dropped altogether, which amounts to assuming that the momentum is lost completely at every event. This approximation is exact only if the correction vanishes. The analogous distinction in the simplest case of an isotropic band is the one between the quantum lifetime and the transport time, where the factor $1-\cos\theta$ in the scattering rate accounts for the retained forward momentum. Plugging in the ansatz in Eq.~\eqref{eqlambdamu} furnishes
 the linear equations, which can be written as a matrix equation of the form
 \begin{align}
 \label{eqmatrix0}
@@ -835,7 +832,7 @@ The number constraint can be understood from parity. The quantities $\mathcal D_
 a=\frac{1}{2}\,\beta_{\rm intr}\,M_1\,, \quad
 b=\frac{1}{8}\,\beta_{\rm intr}\,M_2\,,
 \end{align}
-where $M_n=\int d\gamma^\prime\,\mathcal W(\gamma^\prime)\,\cos(n\,\gamma^\prime)\,\Lambda^z_2(\mu,\gamma^\prime)$. Here $\mathcal W=\mathcal J\,\mathcal D^{-1}/|\partial\xi/\partial\varrho^\prime|$ is the weight of Eq.~\eqref{eqlambdamu} at $k^\prime=k_F$, which is even under $\gamma\to\pi-\gamma$, and so is $\tau_2$. The moments $M_0$ and $M_2$ involve only the even part of $\Lambda^z_2$, which is built from $\lambda$ and $b$ alone. They are therefore homogeneous and $\lambda=b=0$ solves them. This solution is the one selected by the number constraint, which removes the zero mode of the even sector, since an odd $\Lambda^z_2$ integrates to zero. In contrast, $M_1$ receives the contribution $-\int d\gamma^\prime\,\mathcal W\,\tau_2\,\cos\gamma^\prime\,h_2$ from the projection of $h_2$ onto $\cos\gamma$ with the weight $\mathcal W\,\tau_2$. At $B_z=0$, this contribution reduces to $-\,v_0\int d\gamma^\prime\,\mathcal W\,\tau_2\,\cos^2\gamma^\prime$ and is nonzero, so that $a$ is sourced. It is the vertex correction of the odd sector, generated by the in-scattering part of the collision integral. In the RTA, this part is dropped, which corresponds to $a=\lambda=b=0$ and $\Lambda^z_2=-\,\tau\,h_2$ with a constant $\tau$. The odd-in-$B_z$ terms are already present in that case through $h_2$ \cite{ips-firdous-vnr}, and $a$ renormalises them.
+where $M_n=\int d\gamma^\prime\,\mathcal W(\gamma^\prime)\,\cos(n\,\gamma^\prime)\,\Lambda^z_2(\mu,\gamma^\prime)$. Here $\mathcal W=\mathcal J\,\mathcal D^{-1}/|\partial\xi/\partial\mathfrak{R}^\prime|$ is the weight of Eq.~\eqref{eqlambdamu} at $k^\prime=k_F$, which is even under $\gamma\to\pi-\gamma$, and so is $\tau_2$. The moments $M_0$ and $M_2$ involve only the even part of $\Lambda^z_2$, which is built from $\lambda$ and $b$ alone. They are therefore homogeneous and $\lambda=b=0$ solves them. This solution is the one selected by the number constraint, which removes the zero mode of the even sector, since an odd $\Lambda^z_2$ integrates to zero. In contrast, $M_1$ receives the contribution $-\int d\gamma^\prime\,\mathcal W\,\tau_2\,\cos\gamma^\prime\,h_2$ from the projection of $h_2$ onto $\cos\gamma$ with the weight $\mathcal W\,\tau_2$. At $B_z=0$, this contribution reduces to $-\,v_0\int d\gamma^\prime\,\mathcal W\,\tau_2\,\cos^2\gamma^\prime$ and is nonzero, so that $a$ is sourced. It is the vertex correction of the odd sector, generated by the in-scattering part of the collision integral. In the RTA, this part is dropped, which corresponds to $a=\lambda=b=0$ and $\Lambda^z_2=-\,\tau\,h_2$ with a constant $\tau$. The odd-in-$B_z$ terms are already present in that case through $h_2$ \cite{ips-firdous-vnr}, and $a$ renormalises them.
 
 Reading off $\bs m_2$ from Eq.~\eqref{eqbcommhopf}, the Zeeman-like shift of Eq.~\eqref{eqmodi} modifies the dispersion of the $s=2$ band to
 $\xi_2 (\boldsymbol k) = v_0 \, k + e \, v_0 \, B_z \, \cos^2 \gamma /(2\, k)$, and solving $\xi_2 = \mu $ for the Fermi momentum gives
@@ -848,7 +845,7 @@ We keep the root carrying the plus sign before the square-root, since it is the 
 \label{eqh-hopf}
 h_2(\mu,\gamma)=v_0\,\cos\gamma\;\frac{1+2\,u-\frac{1}{2}\,u\,(3+u)\cos^2\gamma}{1+u\,\cos^2\gamma}\,.
 \end{align}
-Expanding $h_2$ in powers of $B_z$ at fixed $\mu$, the coefficients of $B_z^0$, $B_z^1$ and $B_z^2$ are odd polynomials in $\cos\gamma$ of degrees 1, 3, and 3, respectively. Those of $B_z^3$, $B_z^4$ and $B_z^5$ are odd polynomials of degrees 7, 9 and 11. The harmonics $\cos\gamma$ and $\cos (3\gamma)$ thus describe $h_2$ exactly through $\mathcal O(B_z^2)$. The harmonics $\cos (5 \gamma)$, $\cos (7 \gamma)$ and higher-degree odd harmonics enter from $\mathcal O(B_z^3)$ onwards.
+Expanding $h_2$ in powers of $B_z$ at fixed $\mu$, with the dependence of $k_F(\gamma)$ on $B_z$ included, the coefficients of $B_z^0$, $B_z^1$ and $B_z^2$ are odd polynomials in $\cos\gamma$ of degrees 1, 3, and 3, respectively. The degree for $B_z^2$ is 3 and not 5, because the $B_z$-dependence of $k_F(\gamma)$ cancels the $\cos^5\gamma$ term that $u$ alone would generate at this order. Those of $B_z^3$, $B_z^4$ and $B_z^5$ are odd polynomials of degrees 7, 9 and 11. The harmonics $\cos\gamma$ and $\cos (3\gamma)$ thus describe $h_2$ exactly through $\mathcal O(B_z^2)$. The harmonics $\cos (5 \gamma)$, $\cos (7 \gamma)$ and higher-degree odd harmonics enter from $\mathcal O(B_z^3)$ onwards.
 
 %%%%%%
 Fig.~\ref{figexact}(b) illustrates the conductivity behaviour setting $v_0 = 0.0004$ and $\beta_{\rm intr}=1 $. For the chosen parameters, the response contains terms linear in $B_z$, and the linear parts dominate. On increasing the value of $\mu$, the magnitude of the response is seen to decrease. 
@@ -869,7 +866,7 @@ For a pair of conjugate Hopf nodes, the key geometric distinction lies in the or
 \begin{figure*}[t!]
 \includegraphics[width= 1 \textwidth]{sigz-2node}
 \caption{\label{figexact2}
-Behaviour of $\delta \sigma_{zz}$ for a two-node Hopf semimetal with oppositely oriented Berry-curvature dipoles. The flat-band does not contribute, and only the $s=2$ band at each node participates in transport for $\mu>0$. The orange and cyan curves show the separate contributions from the two nodes, and the dark blue curve shows their sum. The columns correspond to $\mu=0.01$, $0.03$ and $0.05$, and the rows to $\beta_{\rm inter}/\beta_{\rm intr}=0.5$ and $0.01$.}
+Behaviour of $\delta \sigma_{zz}$ for a two-node Hopf semimetal with oppositely-oriented Berry-curvature dipoles. The flat-band does not contribute, and only the $s=2$ band at each node participates in transport for $\mu>0$. The orange and cyan curves show the separate contributions from the two nodes, and the dark blue curve shows their sum. The columns correspond to $\mu=0.01$, $0.03$ and $0.05$, and the rows to $\beta_{\rm inter}/\beta_{\rm intr}=0.5$ and $0.01$.}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -908,26 +905,26 @@ The electron-number conservation,
 \end{align}
 must be included for consistency.
 
-As for the single node, $h_{\chi,2}$ is odd under $\gamma\to\pi-\gamma$ for the full expression. The $\chi$-dependence enters only through the product $\chi\,B_z$ in quantities that are even under $\bs k\to-\bs k$, and it does not affect this parity. The node $\chi=+1$ coincides with the single node, and the relations $\bs\Omega_{\chi,2}=-\bs\Omega_{-\chi,2}$ and $\bs m_{\chi,2}=-\bs m_{-\chi,2}$ then imply that $h_{\chi,2}(\mu,\gamma)$ equals the single-node expression of Eq.~\eqref{eqh-hopf} with $B_z$ replaced by $\chi\,B_z$. Its harmonic content is therefore that of the single node, with $B_z^n$ replaced by $\chi^n\,B_z^n$. Its integral against any weight that is even under $\gamma\to\pi-\gamma$ vanishes to all orders in $B_z$. This is the analogue of the vanishing of the charge-pumping vector $\bs{\mathcal I}^\chi$ in the RTA \cite{ips-firdous-vnr}. The overlap function of Eq.~\eqref{eqoverlap-bcd-2node} preserves this parity, since only the term $4\,\cos\gamma\,\cos\gamma^\prime$ is odd, and it does not mix with the even terms. The even sector $\{\lambda_\chi,b_\chi\}$ is thus never sourced and vanishes, whereas $a_\chi$ is sourced by the projection of $h_{\chi,2}$ onto $\cos\gamma$ with the weight of Eq.~\eqref{eqlambdamu} multiplied by $\tau_{\chi,2}$. We have confirmed this by solving the six-by-six system of Eq.~\eqref{eqmatrix-2node}, which gives $\lambda_\pm=b_\pm=0$ for all values of $B_z$, $\mu$ and $\beta^{\rm inter}_{2,2}$, with only $a_\pm$ nonzero.
+As for the single node, $h_{\chi,2}$ is odd under $\gamma\to\pi-\gamma$ for the full expression. The $\chi$-dependence enters only through the product $\chi\,B_z$ in quantities that are even under $\bs k\to-\bs k$, and it does not affect this parity. The node $\chi=+1$ coincides with the single node, and the relations $\bs\Omega_{\chi,2}=-\bs\Omega_{-\chi,2}$ and $\bs m_{\chi,2}=-\bs m_{-\chi,2}$ then imply that $h_{\chi,2}(\mu,\gamma)$ equals the single-node expression of Eq.~\eqref{eqh-hopf} with $B_z$ replaced by $\chi\,B_z$. Its harmonic content is therefore that of the single node, with $B_z^n$ replaced by $\chi^n\,B_z^n$. Its integral against any weight that is even under $\gamma\to\pi-\gamma$ vanishes to all orders in $B_z$. This is the analogue of the vanishing of the charge-pumping vector $\bs{\mathcal I}^\chi$ in the RTA \cite{ips-firdous-vnr}. The overlap function of Eq.~\eqref{eqoverlap-bcd-2node} preserves this parity, since only the term $4\,\cos\gamma\,\cos\gamma^\prime$ is odd, and it does not mix with the even terms. The even sector $\{\lambda_\chi,b_\chi\}$ is thus never sourced and vanishes, whereas $a_\chi$ is sourced by the projection of $h_{\chi,2}$ onto $\cos\gamma$ with the weight of Eq.~\eqref{eqlambdamu} multiplied by $\tau_{\chi,2}$.
 
-The relations of Eq.~\eqref{eqharm-bcd} generalise to
+For the collision integral, we parametrise the intranode and internode scattering strengths as
+\begin{align}
+\big|{\mathcal V}^{\chi,\chi}_{2,2}\big|^2
+= \frac{2\,\pi}{\rho_{\rm imp}}\,\beta_{\rm intr} \,,\quad
+\big|{\mathcal V}^{\chi,-\chi}_{2,2}\big|^2
+= \frac{2\,\pi}{\rho_{\rm imp}}\,\beta^{\rm inter}_{2,2} \,.
+\end{align}
+We write $\beta_{\chi\tilde\chi}$ compactly for these strengths, with $\beta_{\chi\chi}=\beta_{\rm intr}$ and $\beta_{\chi,-\chi}=\beta^{\rm inter}_{2,2}$. The relations of Eq.~\eqref{eqharm-bcd} generalise to
 \begin{align}
 \lambda_\chi=\frac{3}{8}\sum_{\tilde\chi}\beta_{\chi\tilde\chi}\,M^{\tilde\chi}_0\,, \quad
 a_\chi=\frac{1}{2}\sum_{\tilde\chi}\beta_{\chi\tilde\chi}\,M^{\tilde\chi}_1\,, \quad
 b_\chi=\frac{1}{8}\sum_{\tilde\chi}\beta_{\chi\tilde\chi}\,M^{\tilde\chi}_2\,,
 \end{align}
-where $\beta_{\chi\chi}=\beta^{\rm intra}_{2,2}$, $\beta_{\chi,-\chi}=\beta^{\rm inter}_{2,2}$, and $M^{\tilde\chi}_n$ is defined as in the single-node case for the node $\tilde\chi$. The coefficients $a_+$ and $a_-$ are coupled through $\beta^{\rm inter}_{2,2}$, which thus acts as an ordinary additional scattering channel for the vertex correction.
+where $M^{\tilde\chi}_n$ is defined as in the single-node case for the node $\tilde\chi$. The coefficients $a_+$ and $a_-$ are coupled through $\beta^{\rm inter}_{2,2}$, which thus acts as an ordinary additional scattering channel for the vertex correction.
 
-The vanishing of $\{\lambda_\chi,b_\chi\}$ also follows from the continuity equation of each node. Multiplying Eq.~\eqref{eqlambdamu} by $\mathcal W_\chi(\gamma)$ and integrating over $\gamma$ gives the rate equation for the number of electrons at the node $\chi$. The driving term contributes the pumping rate $\int d\gamma\,\mathcal W_\chi\,h_{\chi,2}$, which vanishes by parity. The intranode part of the collision integral drops out, because the scattering is elastic and $\mathcal T_{2,2}(\gamma,\gamma^\prime)$ is symmetric under $\gamma\leftrightarrow\gamma^\prime$. The internode part gives the rate of transfer to the other node, which is proportional to $\beta^{\rm inter}_{2,2}\int d\gamma\,d\gamma^\prime\,\mathcal W_\chi(\gamma)\,\mathcal W_{-\chi}(\gamma^\prime)\,\mathcal T_{2,2}(\gamma,\gamma^\prime)\left[\Lambda^z_{\chi,2}(\gamma)-\Lambda^z_{-\chi,2}(\gamma^\prime)\right]$. Since $\mathcal W$ is even and the term $4\,\cos\gamma\,\cos\gamma^\prime$ of $\mathcal T_{2,2}$ averages to zero against it, the odd part of $\Lambda^z_{\chi,2}$ does not contribute to this rate. Only the even part $\tau_{\chi,2}\left[\lambda_\chi+b_\chi\cos(2\gamma)\right]$ can transfer electrons between the nodes. Since the pumping rate vanishes, the homogeneous equations of the even sector have only the trivial solution once the number constraint is imposed. The continuity equation of each node is thus satisfied by itself, with neither pumping nor transfer. Consequently, $\delta\mu_\chi=0$, the number constraint holds node by node and not only for the sum, and no charge is pumped between the nodes. The net $\delta\sigma_{zz}$ still depends on the ratio $\beta^{\rm inter}_{2,2}/\beta^{\rm intra}_{2,2}$, as seen in Fig.~\ref{figexact2}.
+The vanishing of $\{\lambda_\chi,b_\chi\}$ also follows from the continuity equation of each node. Multiplying Eq.~\eqref{eqlambdamu} by $\mathcal W_\chi(\gamma)$ and integrating over $\gamma$ gives the rate equation for the number of electrons at the node $\chi$. The driving term contributes the pumping rate $\int d\gamma\,\mathcal W_\chi\,h_{\chi,2}$, which vanishes by parity. The intranode part of the collision integral drops out, because the scattering is elastic and $\mathcal T_{2,2}(\gamma,\gamma^\prime)$ is symmetric under $\gamma\leftrightarrow\gamma^\prime$. The internode part gives the rate of transfer to the other node, which is proportional to $\beta^{\rm inter}_{2,2}\int d\gamma\,d\gamma^\prime\,\mathcal W_\chi(\gamma)\,\mathcal W_{-\chi}(\gamma^\prime)\,\mathcal T_{2,2}(\gamma,\gamma^\prime)\left[\Lambda^z_{\chi,2}(\gamma)-\Lambda^z_{-\chi,2}(\gamma^\prime)\right]$. Since $\mathcal W$ is even and the term $4\,\cos\gamma\,\cos\gamma^\prime$ of $\mathcal T_{2,2}$ averages to zero against it, the odd part of $\Lambda^z_{\chi,2}$ does not contribute to this rate. Only the even part $\tau_{\chi,2}\left[\lambda_\chi+b_\chi\cos(2\gamma)\right]$ can transfer electrons between the nodes. Since the pumping rate vanishes, the homogeneous equations of the even sector have only the trivial solution once the number constraint is imposed. The continuity equation of each node is thus satisfied by itself, with neither pumping nor transfer. Consequently, the number constraint holds node by node and not only for the sum, and no charge is pumped between the nodes. The net $\delta\sigma_{zz}$ still depends on the ratio $\beta^{\rm inter}_{2,2}/\beta_{\rm intr}$, as seen in Fig.~\ref{figexact2}.
 
 The matrix $\mathcal A$ of Eq.~\eqref{eqmatrix-2node} is singular as well, with rank 5 for $\beta^{\rm inter}_{2,2}\neq0$ and rank 4 for $\beta^{\rm inter}_{2,2}=0$, as discussed in Appendix~\ref{appsing}.
-For the collision integral, we parametrise the intranode and internode scattering strengths as
-\begin{align}
-\big|{\mathcal V}^{\chi,\chi}_{2,2}\big|^2
-= \frac{2\,\pi}{\rho_{\rm imp}}\,\beta^{\rm intra}_{2,2} \,,\quad
-\big|{\mathcal V}^{\chi,-\chi}_{2,2}\big|^2
-= \frac{2\,\pi}{\rho_{\rm imp}}\,\beta^{\rm inter}_{2,2} \,.
-\end{align}
 Reading off $\boldsymbol m_{\chi,2}=\chi\,\boldsymbol m_2$ from Eq.~\eqref{eqbcommhopf}, the Zeeman-like shift of Eq.~\eqref{eqmodi} modifies the dispersion of the $s=2$ band at the $\chi$-node to
 \begin{align}
 \label{eqxi-2node}
@@ -940,14 +937,14 @@ Solving $\xi_{\chi,2}=\mu$ for the Fermi momentum gives
 k_F^{\chi}
 = \frac{\mu + \sqrt{\mu^2 - 2\,\chi\, e\, v_0^2\, B_z \cos^2\gamma}}{2\,v_0} \,.
 \end{align}
-We retain the root carrying the plus sign before the square-root, since it is the one which reduces to the known result $k_F=\mu/v_0$ at $B_z=0$. Reality of the retained root now requires $2\,e\,v_0^2\,|B_z| \le \mu^2$, restricting the allowed values of $B_Z$ on both directions of the $B_z$-axis, because of the presence of the $\chi \, B_z$ term inside the square-root.
+We retain the root carrying the plus sign before the square-root, since it is the one which reduces to the known result $k_F=\mu/v_0$ at $B_z=0$. Reality of the retained root now requires $2\,e\,v_0^2\,|B_z| \le \mu^2$, restricting the allowed values of $B_z$ in both directions of the $B_z$-axis, because of the presence of the $\chi \, B_z$ term inside the square-root.
 Finally, the net longitudinal magnetoconductivity for the two-node Hopf semimetal is
 obtained from Eq.~\eqref{eqsigmazzexact} by summing over $\chi$.
 The resulting behaviour of $\delta \sigma_{zz}$ is shown in Fig.~\ref{figexact2} for some distinct values of $\mu$ and $\beta_{\rm inter}$, with $v_0=0.0004$ and $\beta_{\rm intr} = 1$ held fixed. The curves have been illustrated for the $s=2$ bands at the 2 nodes as well as for their sum. For the chosen parameters, the curves of the individual nodes contain linear-in-$B_z$ terms with opposite slopes, and the linear parts dominate. The two curves are mirror images of each other, with the $\chi=+1$ curve at $B_z$ coinciding with the $\chi=-1$ curve at $-B_z$. This follows since $\xi_{\chi,2}$ depends on $\chi$ and $B_z$ only through the product $\chi\,B_z$ and the overlap function is independent of $\chi$. The sum over the two nodes is consequently even in $B_z$, so that the odd-in-$B_z$ terms cancel in the net response. The net response is therefore much smaller than the contribution of each node for these parameters. The ratio $\beta_{\rm inter}/\beta_{\rm intr}$ changes the linear terms of each node only slightly. Analogous to the single-node scenario, the magnitude of the response decreases for each case as we crank up $\mu$.
 
 
 
-It is instructive to contrast these findings with the BC-monopole nodes of Refs.~\cite{timm, ips-exact-spin1, ips-exact-kwn, ips-exact-rsw}. For a BC-monopole node, the overlap function is a polynomial in $\cos\theta$ and $\cos\theta^\prime$, whose degree grows with the pseudospin. It is $\left(1+\chi\,\chi^\prime\cos\theta\cos\theta^\prime\right)/2$ for a pair of Weyl nodes \cite{timm} and for a Kramers-Weyl node \cite{ips-exact-kwn}, where the corresponding band index replaces $\chi$ in the latter. It contains terms up to $\cos^3\theta\,\cos^3\theta^\prime$ for the fourfold RSW node \cite{ips-exact-rsw}, where the intranode amplitudes $\beta^{1,1}_{\rm intra}$, $\beta^{3,3}_{\rm intra}$ and the internode amplitude $\beta_{\rm inter}$ multiply three different polynomials. In every one of these cases, the overlap function contains a $\theta$-independent term, as well as harmonics of both parities. The ansatz for $\Lambda^z$ therefore has to carry the constant $\lambda$ along with the full tower of harmonics, and the accompanying matrix is singular for the reason discussed in Appendix~\ref{appsing}, where the role of the continuity equation in the monopole and dipole cases is also compared. Moreover, the BC-monopole nodes have $\bs\Omega\propto\hat{\bs k}/k^2$ and $\bs m\propto\hat{\bs k}$, which are odd under $\bs k\to-\bs k$. The term in $h$ that is linear in $B_z$ then has components of both parities under $\theta\to\pi-\theta$. Consequently, the charge-pumping vector $\bs{\mathcal I}^\chi$ is nonzero and sources the even harmonics, in particular $\lambda_\chi$. How the intranode and internode amplitudes combine in the in-scattering term depends on the structure of the overlap function. For the Weyl pair, the coefficient of the $\cos\theta$ harmonic is multiplied by $\chi\,\chi^\prime$, and it is therefore proportional to $\beta_{\rm intra}-\beta_{\rm inter}$. At equal amplitudes, the odd harmonics drop out, the corresponding coefficients vanish, and the in-scattering term reduces to the RTA form \cite{timm}. For unequal amplitudes, these coefficients are nonzero, and the ratio of the internode to the intranode amplitude controls the sign of the quadratic magnetoconductivity once the OMM is included \cite{timm, ips-exact-spin1}. For the RSW node, there is no such cancellation at a special ratio of the amplitudes, since the three polynomials in the overlap function are all different, and the coefficients depend on the ratios $\beta_{\rm inter}/\beta^{1,1}_{\rm intra}$ and $\beta^{3,3}_{\rm intra}/\beta^{1,1}_{\rm intra}$ throughout \cite{ips-exact-rsw}. The HSM differs from all of these cases in two respects. First, the overlap function $\mathcal T_{2,2}(\gamma,\gamma^\prime)$ is independent of $\chi$. The two scattering channels therefore enter every harmonic with the same sign, and the in-scattering term for the node $\chi$ involves $\beta^{\rm intra}_{2,2}\,\Lambda^z_{\chi,2}+\beta^{\rm inter}_{2,2}\,\Lambda^z_{-\chi,2}$. No special ratio therefore removes the vertex correction $a_\chi$, which remains nonzero for all values of $\beta^{\rm inter}_{2,2}/\beta^{\rm intra}_{2,2}$. Second, $\bs\Omega$ and $\bs m$ are even in $\bs k$ for the BC-dipole, and $h_{\chi,2}$ is odd under $\gamma\to\pi-\gamma$ at every order in $B_z$. Hence $\bs{\mathcal I}^\chi=\bs0$, the even sector is never sourced, and $\lambda_\chi=b_\chi=0$. The internode scattering enters only as an additional channel for the vertex correction and, unlike in the BC-monopole case, it cannot reverse the sign of the response through charge pumping.
+It is instructive to contrast these findings with the BC-monopole nodes of Refs.~\cite{timm, ips-exact-spin1, ips-exact-kwn, ips-exact-rsw}. For a BC-monopole node, the overlap function is a polynomial in $\cos\theta$ and $\cos\theta^\prime$, whose degree grows with the pseudospin. It is $\left(1+\chi\,\chi^\prime\cos\theta\cos\theta^\prime\right)/2$ for a pair of Weyl nodes \cite{timm} and for a Kramers-Weyl node \cite{ips-exact-kwn}, where the corresponding band index replaces $\chi$ in the latter. It contains terms up to $\cos^3\theta\,\cos^3\theta^\prime$ for the fourfold RSW node \cite{ips-exact-rsw}, where the intranode amplitudes $\beta^{1,1}_{\rm intr}$, $\beta^{3,3}_{\rm intr}$ and the internode amplitude $\beta_{\rm inter}$ multiply three different polynomials. In every one of these cases, the overlap function contains a $\theta$-independent term, as well as harmonics of both parities. The ansatz for $\Lambda^z$ therefore has to carry the constant $\lambda$ along with the full tower of harmonics, and the accompanying matrix is singular for the reason discussed in Appendix~\ref{appsing}, where the role of the continuity equation in the monopole and dipole cases is also compared. Moreover, the BC-monopole nodes have $\bs\Omega\propto\hat{\bs k}/k^2$ and $\bs m\propto\hat{\bs k}$, which are odd under $\bs k\to-\bs k$. The term in $h$ that is linear in $B_z$ then has components of both parities under $\theta\to\pi-\theta$. Consequently, the charge-pumping vector $\bs{\mathcal I}^\chi$ is nonzero and sources the even harmonics, in particular $\lambda_\chi$. How the intranode and internode amplitudes combine in the in-scattering term depends on the structure of the overlap function. For the Weyl pair, the coefficient of the $\cos\theta$ harmonic is multiplied by $\chi\,\chi^\prime$, and it is therefore proportional to $\beta_{\rm intr}-\beta_{\rm inter}$. At equal amplitudes, the odd harmonics drop out, the corresponding coefficients vanish, and the in-scattering term reduces to the RTA form \cite{timm}. For unequal amplitudes, these coefficients are nonzero, and the ratio of the internode to the intranode amplitude controls the sign of the quadratic magnetoconductivity once the OMM is included \cite{timm, ips-exact-spin1}. For the RSW node, there is no such cancellation at a special ratio of the amplitudes, since the three polynomials in the overlap function are all different, and the coefficients depend on the ratios $\beta_{\rm inter}/\beta^{1,1}_{\rm intr}$ and $\beta^{3,3}_{\rm intr}/\beta^{1,1}_{\rm intr}$ throughout \cite{ips-exact-rsw}. The HSM differs from all of these cases in two respects. First, the overlap function $\mathcal T_{2,2}(\gamma,\gamma^\prime)$ is independent of $\chi$. The two scattering channels therefore enter every harmonic with the same sign, and the in-scattering term for the node $\chi$ involves $\beta_{\rm intr}\,\Lambda^z_{\chi,2}+\beta^{\rm inter}_{2,2}\,\Lambda^z_{-\chi,2}$. No special ratio therefore removes the vertex correction $a_\chi$, which remains nonzero for all values of $\beta^{\rm inter}_{2,2}/\beta_{\rm intr}$. Second, $\bs\Omega$ and $\bs m$ are even in $\bs k$ for the BC-dipole, and $h_{\chi,2}$ is odd under $\gamma\to\pi-\gamma$ at every order in $B_z$. Hence $\bs{\mathcal I}^\chi=\bs0$, the even sector is never sourced, and $\lambda_\chi=b_\chi=0$. The internode scattering enters only as an additional channel for the vertex correction and, unlike in the BC-monopole case, it cannot reverse the sign of the response through charge pumping.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{\texorpdfstring{Limit of vanishing chemical potential}{Limit of vanishing chemical potential}}
@@ -977,7 +974,7 @@ At $T=0$, the BC and the OMM enter the Fermi-surface integrals only through thei
 
 In this section, we will focus on computing a nonlinear response in the form of the ECR. Contrary to $\sigma_{zz}$ computed in Sec.~\ref{secexact}, here we will restrict ourselves to the RTA since the exact method will be challenging to implement and solve for the purpose of computing the ECR. The main purpose of computing the associated response coefficients is to shed light on how the anisotropic BC shows up in transport, despite the Chern number being zero in the systems under study.
 
-The reader is referred to Ref.~\cite{ips-shreya} for a detailed derivation of the forms of the electric current density, denoted by ${\bs J}_s$ and ${\bs J}_s^{\rm th}$, respectively, starting from the Boltzmann equations (which we do not repeat here). The final expressions are obtained by solving for $ \delta  f_s (\bs r,\bs k)$, which is the deviation of the distribution of the quasiparticles from the equilibrium, upto second order in $\epsilon $. Here, $\epsilon \in [0, 1 ] $ is a perturbative parameter, which quantifies the smallness of the magnitude of the probe fields which usually comprise $\bs E  $, $\nabla_{\bs r} T $, and $\nabla_{\bs r} \mu $. In other words, we work in the regime where $ |\bs E| \propto \epsilon  $, $ |\nabla_{\bs r} T |  \propto \epsilon$, and $ |\nabla_{\bs r} \mu |  \propto \epsilon$, and use the expression,
+The reader is referred to Ref.~\cite{ips-shreya} for a detailed derivation of the forms of the electric and thermal current densities, denoted by ${\bs J}_s$ and ${\bs J}_s^{\rm th}$, respectively, starting from the Boltzmann equations (which we do not repeat here). The final expressions are obtained by solving for $ \delta  f_s (\bs r,\bs k)$, which is the deviation of the distribution of the quasiparticles from the equilibrium, up to second order in $\epsilon $. Here, $\epsilon \in [0, 1 ] $ is a perturbative parameter, which quantifies the smallness of the magnitude of the probe fields which usually comprise $\bs E  $, $\nabla_{\bs r} T $, and $\nabla_{\bs r} \mu $. In other words, we work in the regime where $ |\bs E| \propto \epsilon  $, $ |\nabla_{\bs r} T |  \propto \epsilon$, and $ |\nabla_{\bs r} \mu |  \propto \epsilon$, and use the expression,
 \begin{align}
 f_s (\bs r,\bs k)
 =  f_0  (\varepsilon_s) + \epsilon \, f_s^{(1)}  (\varepsilon_s) 
@@ -988,12 +985,12 @@ in a perturbative expansion in $\epsilon$. Finally, we set $\epsilon = 1 $ at th
 
 
 
-For computing the ECR, we set $\bs B $ and $\nabla_{\bs r} T $ to zero. The part of the total electrical current density ($ {\bs J}_s $), which shows a quadratic dependence on the probe fields $\bs E$ and $\nabla_{\bs r} \mu $, is denoted by ${\bar {\bs J}}^s $. This is the electrochemical current density, with its components being proportional to the quadratic combinations of the form $ E_a  \, \partial_{b} \mu $. Its $a^{\rm th}$ components is given by
+For computing the ECR, we set $\bs B $ and $\nabla_{\bs r} T $ to zero. The part of the total electrical current density ($ {\bs J}_s $), which shows a quadratic dependence on the probe fields $\bs E$ and $\nabla_{\bs r} \mu $, is denoted by ${\bar {\bs J}}^s $. This is the electrochemical current density, with its components being proportional to the quadratic combinations of the form $ E_a  \, \partial_{b} \mu $. Its $a^{\rm th}$ component is given by
 \begin{align}
 \label{eqelectrocur}
 {\bar J}^s_{a}   = \vartheta^s_{a  b c} \, \partial_b\mu \, E_c  \,,
 \end{align}
-where $\vartheta^s_{a b c }$ is a rank-three conductivity tensor for the $s^{\rm th}$ band. Since the dependence of the electric current on the probe fields is at second order, we call the resulting response to be nonlinear.
+where $\vartheta^s_{a b c }$ is a rank-three conductivity tensor for the $s^{\rm th}$ band. Since the dependence of the electric current on the probe fields is at second order, we call the resulting response nonlinear.
 We divide it up as
 %%%%%%%%%%%%%%%%%%%%
 \begin{align}
@@ -1158,10 +1155,10 @@ where $\theta_m \equiv \sin^{-1}\left(\mu/\tilde \eta\right)$ and
 \label{eqJdef}
 \mathcal J(\theta) \equiv \cot \theta \left[\sqrt{1-\eta_x^2 \sin^2 \theta} \,-1\right] + \left(\eta_x^2-1\right) F\left(\theta \,| \,\eta_x^2\right) + E\left(\theta \,| \,\eta_x^2\right) .
 \end{align}
-As with $D^s_{zx}$, both branches are independent of $\mu$ only in the $\mu \geq \tilde \eta$ case; for $\mu < \tilde \eta$ the sum $t^1_{xz}+t^2_{xz}$ must be taken. Taking $\eta_x \rightarrow 0$ from the $\mu \geq \tilde \eta$ side gives $t^2_{xz} \rightarrow 7 \, \eta_x/(64\,\pi)$, smooth and vanishing at $\eta_x=0$.
+As with $D^s_{zx}$, both branches are independent of $\mu$ only in the $\mu \geq \tilde \eta$ case. For $\mu < \tilde \eta$ the sum $t^1_{xz}+t^2_{xz}$ must be taken. Taking $\eta_x \rightarrow 0$ from the $\mu \geq \tilde \eta$ side gives $t^2_{xz} \rightarrow 7 \, \eta_x/(64\,\pi)$, smooth and vanishing at $\eta_x=0$.
 The second case for each band includes the scenarios with $\mu=0 $.
-Here,  $K (\varphi)$ and $ E (\varphi)$ give the complete elliptic integrals of the first and second kinds, respectively. Similarly,
-$F(\varphi |; m)$ and $ E (\varphi |; m)$ denote the incomplete elliptic integrals of the first and second kinds, respectively. Also, for the second case, we need to compute the sum $\left( D^1_{zx} +D^2_{zx} \right) $ as both the bands contribute for a given $\mu$. For checking the $\eta_x \to 0$ limit at fixed $\mu>0$, we note that, since $\mu/\tilde\eta \to \infty$, the relevant branch is $\mu \geq \tilde\eta$, where $D^1_{zx} = 0$ and $D^2_{zx} \to \eta_x/(64\pi)$. Hence $D^1_{zx}+D^2_{zx}$ has a smooth limit for $\eta_x \to 0$, vanishing exactly at $\eta_x = 0$.
+Here, $K (m)$ and $ E (m)$ give the complete elliptic integrals of the first and second kinds, respectively, with the parameter $m$ (which equals $\eta_x^2$ in the complete integrals above) as the argument. Similarly,
+$F(\varphi\,|\,m)$ and $ E (\varphi\,|\,m)$ denote the incomplete elliptic integrals of the first and second kinds, respectively, with amplitude $\varphi$ and parameter $m$. Also, for the second case, we need to compute the sum $\left( D^1_{zx} +D^2_{zx} \right) $ as both the bands contribute for a given $\mu$. For checking the $\eta_x \to 0$ limit at fixed $\mu>0$, we note that, since $\mu/\tilde\eta \to \infty$, the relevant branch is $\mu \geq \tilde\eta$, where $D^1_{zx} = 0$ and $D^2_{zx} \to \eta_x/(64\pi)$. Hence $D^1_{zx}+D^2_{zx}$ has a smooth limit for $\eta_x \to 0$, vanishing exactly at $\eta_x = 0$.
 
 All the diagonal components, which are proportional to $ \lbrace t^s_{aa} \rbrace $, vanish.
 Feeding the above into Eq.~\eqref{eqtheta}, we find that the nonzero components are captured by
@@ -1180,14 +1177,14 @@ sourced by $t^s_{zx}$, together with a second independent pair,
 \vartheta_{x x y}^{(s,2)} = - \, \vartheta_{x y x}^{(s,2)} = -\, e^2 \, \tau \, t^s_{xz} \,,
 \end{align}
 sourced by $t^s_{xz}$.
-Here, $t^s_{xz}$ given in Eqs.~\eqref{eqtxz2}--\eqref{eqJdef}. 
+Here, $t^s_{xz}$ is given in Eqs.~\eqref{eqtxz2}--\eqref{eqJdef}. 
 
 
 \subsubsection{Case II: Tilt with respect to $ k_z $-axis}
  
 
 
-For a nonzero tilt with respect to the $k_z$-axis, setting $\bs \eta = \eta_z \,\bs{\hat z}$, we find that only the diagonal terms, viz. $ \lbrace t^s_{aa} \rbrace $, survive. In this scenario, there is no horn-cyclide formation. For $\mu > 0$ and $\eta_z < 1$, only the $s=2$ band contributes: the $s=1$ band has dispersion $\varepsilon_1 = -v_0\,\kappa + v_0\,\eta_z\,k_z$, and since $\eta_z\,|k_z| < \sqrt{\kappa_\perp^2 + k_z^2}$ for $\eta_z < 1$, we have $\varepsilon_1 < 0$ for every allowed $(\kappa_\perp, k_z)$ --- hence it cannot reach the positive chemical potential $\mu$. Only the $s=2$ band therefore has a Fermi surface at positive $\mu$. With all these details in hand, we obtain
+For a nonzero tilt with respect to the $k_z$-axis, setting $\bs \eta = \eta_z \,\bs{\hat z}$, we find that only the diagonal terms, viz. $ \lbrace t^s_{aa} \rbrace $, survive. In this scenario, there is no horn-cyclide formation. For $\mu > 0$ and $\eta_z < 1$, only the $s=2$ band contributes: the $s=1$ band has dispersion $\varepsilon_1 = -v_0\,\kappa + v_0\,\eta_z\,k_z$, and since $\eta_z\,|k_z| < \sqrt{\kappa_\perp^2 + k_z^2}$ for $\eta_z < 1$, we have $\varepsilon_1 < 0$ for every allowed $(\kappa_\perp, k_z)$. Hence it cannot reach the positive chemical potential $\mu$. Only the $s=2$ band therefore has a Fermi surface at positive $\mu$. With all these details in hand, we obtain
 \begin{align}
 t^2_{xx} = t^2_{yy} = -\, \frac{t^2_{zz}} {2}
 %%%%%%%%%%
@@ -1208,7 +1205,7 @@ Intriguingly, these are completely independent of the magnitude of $\mu$, and ha
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{${\mathcal P} {\mathcal T}$-symmetric nodal-ring}
 
-Analogous to the VNR case, an untilted PTNR too have vanishing nonlinear-response coefficients. Hence, we discuss the tilted scenarios with $\bs \eta = \eta_x \,\bs{\hat x} $ and $ \bs \eta = \eta_z \,\bs{\hat z} $. 
+Analogous to the VNR case, an untilted PTNR too has vanishing nonlinear-response coefficients. Hence, we discuss the tilted scenarios with $\bs \eta = \eta_x \,\bs{\hat x} $ and $ \bs \eta = \eta_z \,\bs{\hat z} $. 
 
 \subsubsection{Case I: Tilt with respect to $ k_x $-axis}
 
@@ -1271,7 +1268,7 @@ Now, for $\bs{J}^{(s, 2)}$, only the $x$-component survives, which evaluates to
   \delta(k_z)\,\delta(k_\perp-k_0)
 \left[\partial_x \mu\, E_z \cos \phi + \partial_y \mu\,  E_z \sin \phi
 - \partial_z \mu\,( E_x \cos \phi + E_y \sin \phi ) \right ]
-\delta \big( \tilde \eta \cos \phi  -\mu \big)\nn
+\delta \big( \tilde \eta \cos \phi  -\mu \big)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \nn & = \left (\partial_z \mu\, E_x - \partial_x \mu \, E_z   \right )D^s_{xy}\,.
 \end{align}
@@ -1295,7 +1292,7 @@ A nonzero tilt $ \bs \eta = \eta_z \,\bs{\hat z} $ does not give any nonzero non
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Three-band Hopf semimetal}
 
-For the BC-dipole nodal point, keeping with the trend of the nodal-ring systems, there is zero nonlinear response for no tilt. Therefore, we will consider the two cases: $\bs \eta = \eta_x \,\bs{\hat x} $ and $ \bs \eta = \eta_z \,\bs{\hat z} $. It turns out that the $s=0$ band does not lead to a nonzero ECR even for the tilted cases --- so we do not discuss it anymore.
+For the BC-dipole nodal point, keeping with the trend of the nodal-ring systems, there is zero nonlinear response for no tilt. Therefore, we will consider the two cases: $\bs \eta = \eta_x \,\bs{\hat x} $ and $ \bs \eta = \eta_z \,\bs{\hat z} $. It turns out that the $s=0$ band does not lead to a nonzero ECR even for the tilted cases. We therefore do not discuss it any further.
 
 
 
@@ -1303,7 +1300,7 @@ For the BC-dipole nodal point, keeping with the trend of the nodal-ring systems,
 \subsubsection{Case I: Tilt with respect to $ k_x $-axis}
 
 In analogy with the VNR and PTNR cases, all diagonal components, viz. $\lbrace t^s_{aa} \rbrace $, vanish.
-As for the off-diagonal components proportional to the BCD, $D^s_{zx}$ survives just like the VNR system; as in the VNR, its transpose $t^s_{xz}$ is independently nonzero as well, and turns out to be larger in magnitude. Explicit calculations lead to
+As for the off-diagonal components proportional to the BCD, $D^s_{zx}$ survives just like the VNR system. As in the VNR, its transpose $t^s_{xz}$ is independently nonzero as well, and turns out to be larger in magnitude. Explicit calculations lead to
 \begin{align}
 D^s_{zx} = \frac{\eta _x \left(2 \,\eta _x^2-3\right)
 + 3 \left( 1- \eta _x^2 \right) \tanh ^{-1} \eta _x}   {12 \,\pi ^2\, \eta _x^4}\;
@@ -1333,7 +1330,7 @@ t^s_{zz} = \frac{\eta _z \left(2 \,\eta _z^2-3\right)+3 \left( 1- \eta _z^2\righ
 \tanh ^{-1} \eta _z} {6 \, \pi ^2 \, \eta _z^4}
  \text{ for } s=1 \text{ and } s=2\,.
 \end{align}
-Here, $ _2F_1(a, b; c; z) $ is the Gaussian or ordinary hypergeometric function. Again, the results are completely independent of $\mu$ and has a smooth limit for $\eta_z \rightarrow  0 $ (vanishing exactly at $\eta_z  =  0$). As with the VNR, this independence follows from an exact cancellation, here between the $1/k^2$ carried by the BC of Eq.~\eqref{eqbcommhopf} and the $k^2$ supplied by the Jacobian.
+Here, $ _2F_1(a, b; c; z) $ is the Gaussian or ordinary hypergeometric function. Again, the results are completely independent of $\mu$ and have a smooth limit for $\eta_z \rightarrow  0 $ (vanishing exactly at $\eta_z  =  0$). As with the VNR, this independence follows from an exact cancellation, here between the $1/k^2$ carried by the BC of Eq.~\eqref{eqbcommhopf} and the $k^2$ supplied by the Jacobian.
 %%%%%%%%%
 The two diagonal answers above satisfy the identity $t^s_{zz}=-\,2\,t^s_{xx}$ for all $\eta_z$. The identity is proved by substituting $u = \cos \gamma$ in both momentum integrals. The two angular integrals reduce to
 \begin{align}
@@ -1365,9 +1362,9 @@ This tilt breaks both the $C_{\infty z}$ rotation and the $k_z$ mirror. The anti
 For the HSM, only the $s=2$ band has a Fermi surface at $\mu>0$. Defining the three functions
 \begin{align}
 \label{eqFhopf}
-& \mathcal F_1 (\eta) = \frac{3\,(1-\eta^2)\,\arctanh\eta - 3\,\eta + 2\,\eta^3}{3\,\eta^4}\,, \quad
-\mathcal F_2 (\eta) = \frac{3\,(1-\eta^2)^2\,\arctanh\eta - 3\,\eta + 5\,\eta^3}{3\,\eta^4}\,, \nn &
-\mathcal F_3 (\eta) = \frac{3\,(1-\eta^2)\,(\eta^2-5)\,\arctanh\eta + 15\,\eta - 13\,\eta^3}{3\,\eta^4}\,,
+& \mathcal F_1 (\eta) = \frac{3\,(1-\eta^2)\,\tanh^{-1}\eta - 3\,\eta + 2\,\eta^3}{3\,\eta^4}\,, \quad
+\mathcal F_2 (\eta) = \frac{3\,(1-\eta^2)^2\,\tanh^{-1}\eta - 3\,\eta + 5\,\eta^3}{3\,\eta^4}\,, \nn &
+\mathcal F_3 (\eta) = \frac{3\,(1-\eta^2)\,(\eta^2-5)\,\tanh^{-1}\eta + 15\,\eta - 13\,\eta^3}{3\,\eta^4}\,,
 \end{align}
 each of which vanishes linearly as $\eta\to0$, we find
 \begin{align}
@@ -1383,7 +1380,7 @@ For $\eta_x=0$ these reduce to the results of Case~II, and for $\eta_z=0$ to tho
 \label{eqhopfrel}
 & t^2_{xx}+t^2_{yy}+t^2_{zz} = 0 \,, \quad
 t^2_{xx}-t^2_{yy} = -\,\frac{\hat\eta_x^2\,\hat\eta_z}{4\,\pi^2}\,\mathcal F_3 \,, \quad
-t^2_{xz}-t^2_{zx} = -\,\frac{\hat\eta_x}{4\,\pi^2\,\eta^2} \left[ \eta - (1-\eta^2)\,\arctanh\eta \right]
+t^2_{xz}-t^2_{zx} = -\,\frac{\hat\eta_x}{4\,\pi^2\,\eta^2} \left[ \eta - (1-\eta^2)\,\tanh^{-1}\eta \right]
 \end{align}
 follow directly. The vanishing of the trace holds for any tilt, since $(\bs n+\bs\eta)\cdot\bs n=1+\bs\eta\cdot\bs n$, with $\bs n=\hat{\bs k}$, cancels the denominator of the integrand and leaves an integral of $n_z$ over the sphere. Hence, as soon as both tilts are present, the isotropy $t^2_{xx}=t^2_{yy}$ is lifted, and the relation $t^2_{zz}=-2\,t^2_{xx}$ of Case~II is replaced by $t^2_{zz}+2\,t^2_{xx}=t^2_{xx}-t^2_{yy}$. At small tilt, the expansions
 \begin{align}
@@ -1412,10 +1409,10 @@ t^2_{ab} = \frac{1}{16\,\pi^3} \int_0^{2\,\pi} d\phi \;\mathscr S_{ab}(\phi) \,,
 \end{align}
 where the integrands $\mathscr S_{ab}(\phi)$ are elementary functions of $R(\phi)=\sqrt{\eta_z^2+\eta_x^2\cos^2\phi}$ and $\sqrt{1-R^2(\phi)}$, listed in Eqs.~\eqref{eqSab} and \eqref{eqJpq} of Appendix~\ref{appcomb}. The condition $\eta<1$ is precisely the requirement that $1-R^2(\phi)>0$ for all $\phi$, which ensures that the toroidal Fermi surface remains closed.
 
-For $\mu\ge\tilde\eta$, the remaining $\phi$-integral can be performed in closed form. With $\varrho=\sqrt{1-\eta_z^2}$, $k^2=\eta_x^2/\varrho^2$ and $\hat\Pi\equiv\Pi\!\left(-\eta_z^2/\varrho^2\,\big|\,k^2\right)$, where $K$, $E$ and $\Pi$ denote the complete elliptic integrals of the first, second and third kind, we obtain
+For $\mu\ge\tilde\eta$, the remaining $\phi$-integral can be performed in closed form. With $\varrho=\sqrt{1-\eta_z^2}$, $\varsigma^2=\eta_x^2/\varrho^2$ and $\hat\Pi\equiv\Pi\!\left(-\eta_z^2/\varrho^2\,\big|\,\varsigma^2\right)$, where $K$, $E$ and $\Pi$ denote the complete elliptic integrals of the first, second and third kind, we obtain
 \begin{align}
 \label{eqvnrclosed}
-t^2_{ab} = \frac{1}{4\,\pi^2} \left[ \mathcal A_{ab}\,K(k^2) + \mathcal B_{ab}\,E(k^2) + \mathcal C_{ab}\,\hat\Pi \right] + \mathcal E_{ab}\,,
+t^2_{ab} = \frac{1}{4\,\pi^2} \left[ \mathcal A_{ab}\,K(\varsigma^2) + \mathcal B_{ab}\,E(\varsigma^2) + \mathcal C_{ab}\,\hat\Pi \right] + \mathcal E_{ab}\,,
 \end{align}
 with the coefficients $\mathcal A_{ab}$, $\mathcal B_{ab}$, $\mathcal C_{ab}$ and $\mathcal E_{ab}$ listed in Eq.~\eqref{eqvnrcoef} of Appendix~\ref{appcomb}. For $\eta_x\to0$ and $\eta_z\to0$, Eq.~\eqref{eqvnrclosed} reduces to the results of Case~II and Case~I, respectively. The single-tilt results of the VNR and the HSM are thus the limits $\eta_z\to0$ and $\eta_x\to0$ of Eqs.~\eqref{eqvnrclosed} and \eqref{eqhopfcomb}, where the former holds for $\mu\ge\tilde\eta$. The regime $\mu<\tilde\eta$ of the VNR is covered by Eq.~\eqref{eqvnrcombmu}.
 
@@ -1440,7 +1437,7 @@ lead to the same structure as for the HSM. The response is additive to linear or
 \Delta_{xz} = \frac{9\,\eta_x\,\eta_z^2}{128\,\pi}\,, \quad
 \Delta_{zx} = \frac{\eta_x\,\eta_z^2}{128\,\pi}\,.
 \end{align}
-For $\mu<\tilde\eta$, the $\phi$-integration is restricted, as in the single-tilt cases. With $\phi_m\equiv\arccos\left[\min(1,\mu/\tilde\eta)\right]$, we obtain
+For $\mu<\tilde\eta$, the $\phi$-integration is restricted, as in the single-tilt cases. With $\phi_m\equiv\cos^{-1}\left[\min(1,\mu/\tilde\eta)\right]$, we obtain
 \begin{align}
 \label{eqvnrcombmu}
 t^2_{ab} = \frac{1}{16\,\pi^3} \int_{\phi_m}^{2\,\pi-\phi_m} d\phi \;\mathscr S_{ab}(\phi) \,, \quad
@@ -1475,12 +1472,12 @@ The sets of nonzero components of Eqs.~\eqref{eqtheta1}, \eqref{eqtheta1b} and \
 
 In this paper, we have examined how a dipole-textured BC, rather than the familiar monopolar texture $\bs\Omega_s \propto \hat{\bs k}$ of an isotropic Weyl node, shapes the transport response of three exotic semimetals: the VNR, the PTNR, and the three-band HSM. The VNR and the PTNR carry a toroidal Fermi surface, while the HSM carries a spherical one. Saliently, both the VNR and the HSM host anisotropic dipole-like BC and OMM profiles from their underlying nodal structure, the former spreading it continuously along the nodal-ring and the latter localising it at the isolated Hopf point [cf. Fig.~\ref{figbc}]. This shared feature, rather than any similarity in their dispersions, is what drives the qualitative parallels we find between the VNR and the HSM throughout our analysis of the longitudinal magnetoconductivity ($\sigma_{zz}$) and the ECR, and it is consistent with the anisotropic collective-mode and transport response already reported for the HSM elsewhere \cite{hopf-plasmon}.
 
-For the linear response, obtained from an exact solution of the Boltzmann equation rather than the RTA, we found that $\sigma_{zz}$ for the VNR and the HSM contains odd-in-$B_z$ terms alongside the usual even-in-$ B_z $ ones [cf. Eq.~\eqref{eqsigmazzexact} and Fig.~\ref{figexact}]. We traced this feature to the absence of standalone time-reversal symmetry in these two models. Their vortex-like pseudospin winding around the nodal locus is compensated only by the weaker $\Xi$-covariant relation identified in Sec.~\ref{secmodels}, rather than by the ordinary Onsager-Casimir relation \cite{onsager1, onsager2, onsager3}. This makes the VNR and a single HSM node, or an HSM with imbalanced nodes, the natural candidates for observing odd-in-$B_z$ terms in the topology-induced magnetoconductance in experiments. Extending the exact treatment to a two-node HSM, with conjugate nodes carrying oppositely oriented BC-dipole axes, sharpens this picture further [cf. Fig.~\ref{figexact2}]. The net $\delta \sigma_{zz}$ is the sum of two mirror-image single-node contributions, whose odd-in-$B_z$ terms cancel and leave a net response that is even in $B_z$ and, for the chosen parameters, much smaller than the individual contributions. The scattering ratio changes the linear terms of each node only slightly. No charge is pumped between the nodes, in agreement with the RTA result of Ref.~\cite{ips-firdous-vnr}, and the internode term acts as an ordinary additional scattering channel. As with the single node, the magnitude of the response falls off as $\mu$ is increased.
+For the linear response, obtained from an exact solution of the Boltzmann equation rather than the RTA, we found that $\sigma_{zz}$ for the VNR and the HSM contains odd-in-$B_z$ terms alongside the usual even-in-$ B_z $ ones [cf. Eq.~\eqref{eqsigmazzexact} and Fig.~\ref{figexact}]. We traced this feature to the absence of standalone time-reversal symmetry in these two models. Their vortex-like pseudospin winding around the nodal locus is compensated only by the weaker $\Xi$-covariant relation identified in Sec.~\ref{secmodels}, rather than by the ordinary Onsager--Casimir relation \cite{onsager1, onsager2, onsager3}. This makes the VNR and a single HSM node, or an HSM with imbalanced nodes, the natural candidates for observing odd-in-$B_z$ terms in the topology-induced magnetoconductance in experiments. Extending the exact treatment to a two-node HSM, with conjugate nodes carrying oppositely-oriented BC-dipole axes, sharpens this picture further [cf. Fig.~\ref{figexact2}]. The net $\delta \sigma_{zz}$ is the sum of two mirror-image single-node contributions, whose odd-in-$B_z$ terms cancel and leave a net response that is even in $B_z$ and, for the chosen parameters, much smaller than the individual contributions. The scattering ratio changes the linear terms of each node only slightly. No charge is pumped between the nodes, in agreement with the RTA result of Ref.~\cite{ips-firdous-vnr}, and the internode term acts as an ordinary additional scattering channel. As with the single node, the magnitude of the response falls off as $\mu$ is increased.
 
 The ECR exhibits a related but distinct pattern. For the VNR and the HSM, the two tilt directions considered separately, $\eta_x\,\bs{\hat x}$ and $\eta_z\,\bs{\hat z}$, activate mutually exclusive sets of response components. Axial tilts and equatorial tilts probe non-overlapping entries of $\vartheta^{(s,1)}_{abc}$ and $\vartheta^{(s,2)}_{abc}$, with the surviving components fixed entirely by symmetry. A tilt along $\bs{\hat x}$ breaks the $C_{\infty z}$ rotation while leaving the mirror intact, allowing the off-diagonal BC-dipole (BCD) components to become nonzero. A tilt along $\bs{\hat z}$ does the reverse, preserving $C_{\infty z}$ while breaking the mirror, and permits only the diagonal components of $t^s_{ab}$ instead. The VNR and the HSM again track each other closely, sharing an identical mapping from the surviving BCD or diagonal terms onto the nonzero components of $\vartheta^{(s,1)}_{abc}$ and $\vartheta^{(s,2)}_{abc}$ [cf. Eqs.~\eqref{eqtheta1} and \eqref{eqtheta3}]. The PTNR departs from this pattern: its BC is confined entirely to the nodal-ring rather than spread throughout the Fermi sea, and its ECR vanishes identically for both tilt directions. An in-plane tilt does produce nonzero coefficients for the individual bands ($s=1$ and $s=2$), but their contributions are equal and opposite and cancel in the band-summed current. An axial tilt leaves the ring pinned at zero energy and yields nothing at all. This null result is the natural counterpart, on the ECR side, of the PTNR's retention of both $T$ and the mirror. In every case, the response vanishes smoothly as the tilt is switched off, confirming that it is the tilt-induced mixing of the anisotropic BC into the Fermi-surface average, and not the tilt by itself, that drives the effect. When both tilt directions are present simultaneously, the VNR and the HSM are described by closed-form expressions that contain the single-tilt results as limiting cases [cf. Eqs.~\eqref{eqhopfcomb} and \eqref{eqvnrclosed}]. The two directions act additively to linear order in the tilt. Their interference first appears at third order, through terms $\propto\eta_x^2\,\eta_z$ in the diagonal components and $\propto\eta_x\,\eta_z^2$ in the off-diagonal ones [cf. Eqs.~\eqref{eqhopfdelta} and \eqref{eqvnrdelta}], and it lifts the isotropy of the diagonal components in the $xy$-plane. For the PTNR, the individual-band coefficients acquire additional components, which still cancel in the band sum [cf. Eq.~\eqref{eqptnrcomb}].
 
 Taken together, our results indicate that a spatially extended or dipolar BC texture, rather than a nonzero Chern number, is the key ingredient behind both the anomalous linear-in-$B_z$ magnetoconductance and the anisotropic ECR reported here. Several extensions follow naturally from this picture. The most immediate one is to relax the collinearity of $\bs E$ and $\bs B$. Doing so would activate the Hall and planar-Hall components of the conductivity tensor, which would prove to be sensitive experimental probes of an anisotropic Fermi surface and BC texture in tilted Weyl and Dirac semimetals \cite{burkov17_giant, ma19_planar, li18_giant}, and would be a natural transport signature to look for in the VNR and the HSM. A second direction is to restore the temperature gradient $\nabla_{\bs r} T$ that we set to zero in Sec.~\ref{secnonlinear}. The same Boltzmann-transport machinery would then furnish the thermal and thermoelectric analogues of the ECR, including a planar thermal-Hall response \cite{nandy_thermal_hall, ips-ruiz, ips-spin1-ph, ips-rsw-ph} and an anomalous Nernst signal \cite{watzman18_dirac}, both again controlled by the BC and the OMM of the underlying bands.
-Next, it will be worthwhile to investigate how the regime of strong magnetic fields affect the transport features \cite{gusynin06_magneto, yadav23_magneto, dirac-qtm, deng2019_quantum, ips-sanskar-2dgnr}, Finally, it would be worth asking how the picture developed here is modified for a non-Hermitian dissipative realisation of a nodal-ring or a Hopf semimetal \cite{ips-hessen}, where various symmetries have been shown to protect exceptional points.
+Next, it will be worthwhile to investigate how the regime of strong magnetic fields affects the transport features \cite{gusynin06_magneto, yadav23_magneto, dirac-qtm, deng2019_quantum, ips-sanskar-2dgnr}. Finally, it would be worth asking how the picture developed here is modified for a non-Hermitian dissipative realisation of a nodal-ring or a Hopf semimetal \cite{ips-hessen}, where various symmetries have been shown to protect exceptional points.
 
 \section*{Data availability}
 
@@ -1501,7 +1498,7 @@ Clearly, if $  \mu < \tilde \eta $, we have to restrict the upper (lower) limit 
 \begin{enumerate}
 \item Implementing the Dirac-delta function, we get rid of the $\kappa $-integral and replace $\kappa $ by $ (\mu - \tilde \eta \cos \phi ) /(v_0\, \zeta_s) $ in the integrand. Say, the integral is now $I_s = \int_0^{2\pi} d\gamma \int_{-\pi}^{\pi} d \phi \,\mathcal{I}_s (\gamma, \phi)$.
 
-\item Perform the $\gamma$-integral first to get the form $I_s =  \int_{-\pi}^{\pi} d \phi \,\tilde{\mathcal{I}_s } (\gamma, \phi)$.
+\item Perform the $\gamma$-integral first to get the form $I_s =  \int_{-\pi}^{\pi} d \phi \,\tilde{\mathcal{I}_s } (\phi)$.
 
 \item We divide up the integral as $I_s = I_1^{(s)} + I_2^{(s)} $, where $ I_1^{(s)} = 
 \int_{-\pi}^{ - \phi_m } d \phi \, \tilde{\mathcal{I}_s} (\phi) $,
@@ -1516,30 +1513,34 @@ $ I_2^{(s)} =  \int_{\phi_m}^{\pi} d \phi \,\tilde{\mathcal{I}_s} (\phi)$, and $
 \end{enumerate}
 %%%%%%%%%%%%%%%
 
-\section{Intermediate steps for the combined in-plane and axial tilt}
+\section{Intermediate steps for the combined in-plane and axial tilts}
 \label{appcomb}
 
 
 In this appendix, we derive the results of Sec.~\ref{seccombined} for $\bs\eta=\eta_x\,\hat{\bs x}+\eta_z\,\hat{\bs z}$ with $\eta=\sqrt{\eta_x^2+\eta_z^2}<1$ and $\mu>0$. We start with the HSM, whose angular structure is the simplest, and continue with the VNR and the PTNR.
 
+
+%%%%%%%%%%%%%%%%%
 \subsection{Three-band Hopf semimetal}
 
 Let $\bs n\equiv\hat{\bs k}=(\sin\gamma\cos\phi,\,\sin\gamma\sin\phi,\,\cos\gamma)$. From Eqs.~\eqref{eqevhopf} and \eqref{eqbcommhopf}, the dispersive bands have $\varepsilon_s=v_0\,k\,[(-1)^s+\bs\eta\cdot\bs n]$, $\bs v^{(0,s)}=v_0\,[(-1)^s\,\bs n+\bs\eta]$ and $\bs\Omega_s=n_z\,\bs n/k^2$. Since $\eta<1$, the factor $(-1)^s+\bs\eta\cdot\bs n$ has the sign of $(-1)^s$. Hence the $s=1$ band lies below zero energy everywhere, and only the $s=2$ band has a Fermi surface at $\mu>0$, with $k_F=\mu/[v_0\,(1+\bs\eta\cdot\bs n)]$. Using $f_0^\prime=-\,\delta(\varepsilon_2-\mu)$ in Eq.~\eqref{eqtheta}, we have
+%%%%%%%%%%%%%%%%%%%%
 \begin{align}
 t^2_{ab} & = -\,\frac{1}{(2\,\pi)^3} \int d\Omega \int_0^\infty dk\,k^2\; v_0\,(n_a+\eta_a)\,\frac{n_z\,n_b}{k^2}\; \frac{\delta (k-k_F)}{v_0\,(1+\bs\eta\cdot\bs n)}\nn
 & = -\,\frac{1}{8\,\pi^3} \int d\Omega\; \frac{(n_a+\eta_a)\,n_z\,n_b}{1+\bs\eta\cdot\bs n}\,.
 \end{align}
+%%%%%%%%%%%%%%%%%
 The factor $k^2$ of the Jacobian cancels against the $1/k^2$ of the BC, which is why the result is independent of $\mu$. Setting $b=a$ and summing over $a$, we use $(\bs n+\bs\eta)\cdot\bs n=1+\bs\eta\cdot\bs n$ to obtain $\sum_a t^2_{aa}=-\frac{1}{8\pi^3}\int d\Omega\,n_z=0$.
 
 To evaluate the integral for a general tilt, we expand the tensors in terms of $\hat{\bs\eta}=\bs\eta/\eta$ and use $c=\hat{\bs\eta}\cdot\bs n$ as the polar variable about the tilt axis. The moments
 \begin{align}
 P_j = 2\,\pi \int_{-1}^{1} \frac{c^j\,dc}{1+\eta\,c}
 \end{align}
-are obtained from the recursion $P_j=\frac{2\pi}{\eta}\left[\int_{-1}^1 c^{j-1}dc-\frac{P_{j-1}}{2\pi}\right]$, starting from $P_0=4\,\pi\,\arctanh\eta/\eta$. They read
+are obtained from the recursion $P_j=\frac{2\pi}{\eta}\left[\int_{-1}^1 c^{j-1}dc-\frac{P_{j-1}}{2\pi}\right]$, starting from $P_0=4\,\pi\,\tanh^{-1}\eta/\eta$. They read
 \begin{align}
-& P_1 = \frac{4\,\pi}{\eta} \left[ 1 - \frac{\arctanh\eta}{\eta} \right], \quad
-P_2 = \frac{4\,\pi}{\eta^2} \left[ \frac{\arctanh\eta}{\eta} - 1 \right], \quad
-P_3 = \frac{4\,\pi}{\eta} \left[ \frac13 + \frac{1}{\eta^2} - \frac{\arctanh\eta}{\eta^3} \right].
+& P_1 = \frac{4\,\pi}{\eta} \left[ 1 - \frac{\tanh^{-1}\eta}{\eta} \right], \quad
+P_2 = \frac{4\,\pi}{\eta^2} \left[ \frac{\tanh^{-1}\eta}{\eta} - 1 \right], \quad
+P_3 = \frac{4\,\pi}{\eta} \left[ \frac13 + \frac{1}{\eta^2} - \frac{\tanh^{-1}\eta}{\eta^3} \right].
 \end{align}
 By covariance, the tensor moments of $\bs n$ take the forms
 \begin{align}
@@ -1548,10 +1549,10 @@ By covariance, the tensor moments of $\bs n$ take the forms
 \end{align}
 The coefficients are fixed by contracting with $\delta_{ab}$ and with $\hat\eta_a\hat\eta_b$ (and likewise for the rank-three tensor), which gives $\mathscr B_0=(P_0-P_2)/2$, $\mathscr B_2=(3\,P_2-P_0)/2$, $\mathscr C_1=(P_1-P_3)/2$ and $\mathscr C_3=(5\,P_3-3\,P_1)/2$. Explicitly,
 \begin{align}
-& \mathscr B_0 = \frac{2\,\pi \left[ \eta - (1-\eta^2)\,\arctanh\eta \right]}{\eta^3} \,, \quad
-\mathscr B_2 = \frac{2\,\pi \left[ (3-\eta^2)\,\arctanh\eta - 3\,\eta \right]}{\eta^3} \,, \nn &
+& \mathscr B_0 = \frac{2\,\pi \left[ \eta - (1-\eta^2)\,\tanh^{-1}\eta \right]}{\eta^3} \,, \quad
+\mathscr B_2 = \frac{2\,\pi \left[ (3-\eta^2)\,\tanh^{-1}\eta - 3\,\eta \right]}{\eta^3} \,, \nn &
 \mathscr C_1 = 2\,\pi\,\mathcal F_1 \,, \quad
-\mathscr C_3 = \frac{2\,\pi \left[ 3\,(3\,\eta^2-5)\,\arctanh\eta + 15\,\eta - 4\,\eta^3 \right]}{3\,\eta^4}\,,
+\mathscr C_3 = \frac{2\,\pi \left[ 3\,(3\,\eta^2-5)\,\tanh^{-1}\eta + 15\,\eta - 4\,\eta^3 \right]}{3\,\eta^4}\,,
 \end{align}
 and the combinations that appear below satisfy $\mathscr C_1+\eta\,\mathscr B_0=2\,\pi\,\mathcal F_2$ and $\mathscr C_3+\eta\,\mathscr B_2=2\,\pi\,\mathcal F_3$, with $\mathcal F_{1,2,3}$ given in Eq.~\eqref{eqFhopf}. Inserting the tensor moments, with $\eta_a=\eta\,\hat\eta_a$, yields
 \begin{align}
@@ -1565,9 +1566,9 @@ For $\hat\eta_y=0$, the components with $y$ and one other index vanish, and the 
 -\,8\,\pi^3\,t^2_{xz} = \hat\eta_x \left[ \mathscr C_1 + \eta\,\mathscr B_0 + (\mathscr C_3+\eta\,\mathscr B_2)\,\hat\eta_z^2 \right] , \quad
 -\,8\,\pi^3\,t^2_{zx} = \hat\eta_x \left[ \mathscr C_1 + (\mathscr C_3+\eta\,\mathscr B_2)\,\hat\eta_z^2 \right] .
 \end{align}
-Using the combinations quoted above, together with $3\,\mathscr C_1+\eta\,\mathscr B_0=2\,\pi\,(2\,\mathcal F_1+\mathcal F_2)$, we arrive at Eq.~\eqref{eqhopfcomb}. The relations in Eq.~\eqref{eqhopfrel} follow by inspection, with $\mathcal F_2-\mathcal F_1=[\eta-(1-\eta^2)\,\arctanh\eta]/\eta^2$.
+Using the combinations quoted above, together with $3\,\mathscr C_1+\eta\,\mathscr B_0=2\,\pi\,(2\,\mathcal F_1+\mathcal F_2)$, we arrive at Eq.~\eqref{eqhopfcomb}. The relations in Eq.~\eqref{eqhopfrel} follow by inspection, with $\mathcal F_2-\mathcal F_1=[\eta-(1-\eta^2)\,\tanh^{-1}\eta]/\eta^2$.
 
-For $\hat\eta_x=0$, we have $\eta=\eta_z$, and $t^2_{zz}=-\frac{1}{4\pi^2}\left(2\,\mathcal F_1+\mathcal F_2+\mathcal F_3\right)=\frac{\eta_z\,(2\,\eta_z^2-3)+3\,(1-\eta_z^2)\,\arctanh\eta_z}{6\,\pi^2\,\eta_z^4}$, which is the result of Case~II. For $\hat\eta_z=0$, we obtain $t^2_{xz}=-\mathcal F_2/(4\,\pi^2)$ and $t^2_{zx}=-\mathcal F_1/(4\,\pi^2)$, which reproduce Eq.~\eqref{eqhopftxz} and $D^2_{zx}=-\,t^2_{zx}$ of Case~I. The small-tilt expansions of Eq.~\eqref{eqhopfser} follow by expanding $\arctanh\eta$ in powers of $\eta$ in Eq.~\eqref{eqFhopf} up to third order in the tilt.
+For $\hat\eta_x=0$, we have $\eta=\eta_z$, and $t^2_{zz}=-\frac{1}{4\pi^2}\left(2\,\mathcal F_1+\mathcal F_2+\mathcal F_3\right)=\frac{\eta_z\,(2\,\eta_z^2-3)+3\,(1-\eta_z^2)\,\tanh^{-1}\eta_z}{6\,\pi^2\,\eta_z^4}$, which is the result of Case~II. For $\hat\eta_z=0$, we obtain $t^2_{xz}=-\mathcal F_2/(4\,\pi^2)$ and $t^2_{zx}=-\mathcal F_1/(4\,\pi^2)$, which reproduce Eq.~\eqref{eqhopftxz} and $D^2_{zx}=-\,t^2_{zx}$ of Case~I. The small-tilt expansions of Eq.~\eqref{eqhopfser} follow by expanding $\tanh^{-1}\eta$ in powers of $\eta$ in Eq.~\eqref{eqFhopf} up to third order in the tilt.
 
 \subsection{Vortex nodal-ring}
 
@@ -1592,13 +1593,12 @@ Let $a\equiv\eta_x\cos\phi$ and $b\equiv\eta_z$, so that $\bs\eta\cdot\bs\nu=a\c
 \label{eqSabexp}
 & \mathscr S_{xx} = \cos^2\phi\;J_{21}+\eta_x\cos\phi\;J_{11} \,, \quad
 \mathscr S_{yy} = \sin^2\phi\;J_{21} \,, \quad
-\mathscr S_{zz} = J_{03}+\eta_z\,J_{02} \,, \nn &
-\mathscr S_{xz} = \cos\phi\;J_{12}+\eta_x\,J_{02} \,, \quad
-\mathscr S_{zx} = \cos\phi \left( J_{12}+\eta_z\,J_{11} \right) ,
-\end{align}
-where
-\begin{align}
-J_{pq}(a,b) = \int_0^{2\,\pi} d\gamma\; \frac{\cos^p\gamma\,\sin^q\gamma}{1+a\cos\gamma+b\sin\gamma}\,.
+\mathscr S_{zz} = J_{03}+\eta_z\,J_{02} \,, \quad
+\mathscr S_{xz} = \cos\phi\;J_{12}+\eta_x\,J_{02} \,, \nn &
+\mathscr S_{zx} = \cos\phi \left( J_{12}+\eta_z\,J_{11} \right) ,\quad
+%%%%%%%%%%%%%%
+J_{pq}(a,b) = \int_0^{2\,\pi} d\gamma
+\frac{\cos^p\gamma\,\sin^q\gamma}{1+a\cos\gamma+b\sin\gamma}\,.
 \end{align}
 The components $\mathscr S_{xy}$, $\mathscr S_{yx}$, $\mathscr S_{yz}$ and $\mathscr S_{zy}$ vanish because they are odd under $\phi\to-\phi$.
 
@@ -1617,7 +1617,7 @@ J_{12} = \frac{\pi\,a\,(1-W)^2 \left[ b^2\,(W-2)-a^2\,W \right]}{R^6\,W}\,.
 \end{align}
 These are regular at $R\to0$, since $1-W=R^2/(1+W)$. Inserting them into Eq.~\eqref{eqSabexp}, with $a=\eta_x\cos\phi$ and $b=\eta_z$, gives the integrands $\mathscr S_{ab}(\phi)$ of Eq.~\eqref{eqvnrcomb}.
 
-Two limits serve as checks. For $\eta_x=0$, we have $a=0$ and $R=\eta_z$, and hence $\mathscr S_{xx}=\cos^2\phi\;J_{21}$ and $\mathscr S_{yy}=\sin^2\phi\;J_{21}$ with $J_{21}\big|_{a=0}=-\,\pi\,(1-W)^2/\eta_z^3$. Since $\int_0^{2\pi}\cos^2\phi\,d\phi=\int_0^{2\pi}\sin^2\phi\,d\phi=\pi$ and $(1-W)^2=2-2\,W-\eta_z^2$, we obtain $t^2_{xx}=t^2_{yy}=\frac{\eta_z^2+2\,\sqrt{1-\eta_z^2}-2}{16\,\pi\,\eta_z^3}$, as in Case~II. For $\eta_z=0$, we have $b=0$ and therefore $J_{11}=J_{21}=J_{03}=0$, which means that all the diagonal components vanish. The remaining components $\mathscr S_{xz}$ and $\mathscr S_{zx}$ involve $R=\eta_x\,|\cos\phi|$ and $\sqrt{1-\eta_x^2\cos^2\phi}$, whose $\phi$-integrals produce the complete elliptic integrals $K(\eta_x^2)$ and $E(\eta_x^2)$ of Case~I. For a general tilt, the result is a single quadrature over $\phi$ of elementary functions of $R(\phi)$ and $W(\phi)$, where $W(\phi)=\sqrt{1-\eta_z^2}\,\sqrt{1-k^2\cos^2\phi}$ and $k^2=\eta_x^2/(1-\eta_z^2)$.
+Two limits serve as checks. For $\eta_x=0$, we have $a=0$ and $R=\eta_z$, and hence $\mathscr S_{xx}=\cos^2\phi\;J_{21}$ and $\mathscr S_{yy}=\sin^2\phi\;J_{21}$ with $J_{21}\big|_{a=0}=-\,\pi\,(1-W)^2/\eta_z^3$. Since $\int_0^{2\pi}\cos^2\phi\,d\phi=\int_0^{2\pi}\sin^2\phi\,d\phi=\pi$ and $(1-W)^2=2-2\,W-\eta_z^2$, we obtain $t^2_{xx}=t^2_{yy}=\frac{\eta_z^2+2\,\sqrt{1-\eta_z^2}-2}{16\,\pi\,\eta_z^3}$, as in Case~II. For $\eta_z=0$, we have $b=0$ and therefore $J_{11}=J_{21}=J_{03}=0$, which means that all the diagonal components vanish. The remaining components $\mathscr S_{xz}$ and $\mathscr S_{zx}$ involve $R=\eta_x\,|\cos\phi|$ and $\sqrt{1-\eta_x^2\cos^2\phi}$, whose $\phi$-integrals produce the complete elliptic integrals $K(\eta_x^2)$ and $E(\eta_x^2)$ of Case~I. For a general tilt, the result is a single quadrature over $\phi$ of elementary functions of $R(\phi)$ and $W(\phi)$, where $W(\phi)=\sqrt{1-\eta_z^2}\,\sqrt{1-\varsigma^2\cos^2\phi}$ and $\varsigma^2=\eta_x^2/(1-\eta_z^2)$.
 
 Let us now show how the $\phi$-integral in Eq.~\eqref{eqvnrcomb} is carried out for $\mu\ge\tilde\eta$. We exchange the order of integration in Eq.~\eqref{eqSab}, so that the $\phi$-integral is performed first at fixed $\gamma$. We define
 \begin{align}
@@ -1644,20 +1644,20 @@ To evaluate the remaining integrals, we introduce the angle $\psi$ through $\sin
 \begin{align}
 \sin\gamma=\frac{\sin\psi-\eta_z}{\lambda}\,, \quad P=\frac{\varrho^2}{\lambda}\,, \quad \mathcal W=\frac{\varrho^2\,\Delta}{\lambda}\,, \quad d\gamma=\frac{\varrho\;d\psi}{\lambda}\,,
 \end{align}
-with $\lambda(\psi)=1-\eta_z\sin\psi$ and $\Delta(\psi)=\sqrt{1-k^2\cos^2\psi}$. The modulus $k^2=\eta_x^2/\varrho^2$ arises from $P^2-\eta_x^2\cos^2\gamma=P^2\,(1-k^2\cos^2\psi)$. Hence $\int_0^{2\pi}d\gamma\,F/\mathcal W=\varrho^{-1}\int_0^{2\pi}d\psi\,F/\Delta$, and the integrand $F$ becomes a Laurent polynomial in $\lambda$ with powers from $\lambda^{-3}$ to $\lambda^0$. All the integrals are therefore combinations of
+with $\lambda(\psi)=1-\eta_z\sin\psi$ and $\Delta(\psi)=\sqrt{1-\varsigma^2\cos^2\psi}$. The parameter $\varsigma^2=\eta_x^2/\varrho^2$ arises from $P^2-\eta_x^2\cos^2\gamma=P^2\,(1-\varsigma^2\cos^2\psi)$. Hence $\int_0^{2\pi}d\gamma\,F/\mathcal W=\varrho^{-1}\int_0^{2\pi}d\psi\,F/\Delta$, and the integrand $F$ becomes a Laurent polynomial in $\lambda$ with powers from $\lambda^{-3}$ to $\lambda^0$. All the integrals are therefore combinations of
 \begin{align}
 \mathcal K_j=\int_0^{2\,\pi}d\psi\,\frac{\lambda^j}{\Delta}\,, \quad j=0,-1,-2,-3\,.
 \end{align}
-The first one is $\mathcal K_0=4\,K(k^2)$. For $j=-1$, the part of $1/\lambda$ that is odd in $\sin\psi$ integrates to zero, and the remainder is $1/(1-\eta_z^2\sin^2\psi)=\varrho^{-2}\left[1+(\eta_z^2/\varrho^2)\cos^2\psi\right]^{-1}$ in terms of $\cos\psi$, which gives $\mathcal K_{-1}=4\,\hat\Pi/\varrho^2$. The integrals with $j=-2$ and $j=-3$ follow from the total derivatives
+The first one is $\mathcal K_0=4\,K(\varsigma^2)$. For $j=-1$, the part of $1/\lambda$ that is odd in $\sin\psi$ integrates to zero, and the remainder is $1/(1-\eta_z^2\sin^2\psi)=\varrho^{-2}\left[1+(\eta_z^2/\varrho^2)\cos^2\psi\right]^{-1}$ in terms of $\cos\psi$, which gives $\mathcal K_{-1}=4\,\hat\Pi/\varrho^2$. The integrals with $j=-2$ and $j=-3$ follow from the total derivatives
 \begin{align}
 \int_0^{2\,\pi}d\psi\,\frac{d}{d\psi}\left[\cos\psi\;\Delta\;\lambda^m\right]=0\,,
 \end{align}
-which relate $\mathcal K_{m-1},\dots,\mathcal K_{m+3}$ for every integer $m$. Taking $m=-1$ and $m=-2$, and using $\mathcal K_1=\mathcal K_0$ and $\mathcal K_2=4\,K+4\,\eta_z^2\left[E-(1-k^2)\,K\right]/k^2$, we find
+which relate $\mathcal K_{m-1},\dots,\mathcal K_{m+3}$ for every integer $m$. Taking $m=-1$ and $m=-2$, and using $\mathcal K_1=\mathcal K_0$ and $\mathcal K_2=4\,K+4\,\eta_z^2\left[E-(1-\varsigma^2)\,K\right]/\varsigma^2$, we find
 \begin{align}
 & \mathcal K_{-2}=-\frac{4\,K}{\varrho^2}+\frac{4\,\eta_z^2\,E}{\eta^2\,\varrho^2}+\frac{4\,(2\,\eta_x^2+\eta_z^2)\,\hat\Pi}{\eta^2\,\varrho^4}\,, \nn &
 \mathcal K_{-3}=-\frac{2\,(4\,\eta_x^2+3\,\eta_z^2)\,K}{\eta^2\,\varrho^4}+\frac{6\,\eta_z^2\,(2\,\eta_x^2+\eta_z^2)\,E}{\eta^4\,\varrho^4}+\frac{2\,\mathcal N\,\hat\Pi}{\eta^4\,\varrho^6}\,,
 \end{align}
-with $\mathcal N=2\,\eta_x^4\,\eta_z^2+6\,\eta_x^4+3\,\eta_x^2\,\eta_z^4+5\,\eta_x^2\,\eta_z^2+\eta_z^6+2\,\eta_z^4$, where $K=K(k^2)$ and $E=E(k^2)$. Inserting these into Eq.~\eqref{eqvnrgamma} yields Eq.~\eqref{eqvnrclosed} with the coefficients
+with $\mathcal N=2\,\eta_x^4\,\eta_z^2+6\,\eta_x^4+3\,\eta_x^2\,\eta_z^4+5\,\eta_x^2\,\eta_z^2+\eta_z^6+2\,\eta_z^4$, where $K=K(\varsigma^2)$ and $E=E(\varsigma^2)$. Inserting these into Eq.~\eqref{eqvnrgamma} yields Eq.~\eqref{eqvnrclosed} with the coefficients
 \begin{align}
 \label{eqvnrcoef}
 & \mathcal A_{xx}=\frac{\varrho\left[2\,\eta_x^2\,(\eta^2-1)-\eta_z^2\right]}{\eta_x^2\,\eta_z\,\eta^2}\,, \quad
@@ -1681,7 +1681,7 @@ with $\mathcal N=2\,\eta_x^4\,\eta_z^2+6\,\eta_x^4+3\,\eta_x^2\,\eta_z^4+5\,\eta
 \mathcal C_{zx}=\mathcal C_{xz}\,, \quad
 \mathcal E_{zx}=\frac{1}{8\,\pi\,\eta_x}\,.
 \end{align}
-The coefficients contain inverse powers of $\eta_x$ and $\eta_z$, but these cancel between the elliptic integrals and the elementary terms, and each $t^2_{ab}$ is regular at $\eta_x\to0$ and $\eta_z\to0$. The trace identity $t^2_{xx}+t^2_{yy}+t^2_{zz}=0$ holds term by term in $K$, $E$, $\hat\Pi$ and the elementary part. For $\eta_x\to0$, we recover $t^2_{xx}=t^2_{yy}=\left(\eta_z^2+2\,\varrho-2\right)/(16\,\pi\,\eta_z^3)$ and $t^2_{zz}=-\,2\,t^2_{xx}$. For $\eta_z\to0$, we have $\hat\Pi\to K(\eta_x^2)$, and $t^2_{xz}$ and $t^2_{zx}$ reduce to the expressions with $K(\eta_x^2)$ and $E(\eta_x^2)$ of Case~I. We have also compared Eqs.~\eqref{eqvnrclosed} and \eqref{eqvnrcoef} with a direct numerical quadrature of Eq.~\eqref{eqvnrcomb} for several values of $(\eta_x,\eta_z)$ with $\eta<1$, and the agreement is better than ten digits.
+The coefficients contain inverse powers of $\eta_x$ and $\eta_z$, but these cancel between the elliptic integrals and the elementary terms, and each $t^2_{ab}$ is regular at $\eta_x\to0$ and $\eta_z\to0$. The trace identity $t^2_{xx}+t^2_{yy}+t^2_{zz}=0$ holds term by term in $K$, $E$, $\hat\Pi$ and the elementary part. For $\eta_x\to0$, we recover $t^2_{xx}=t^2_{yy}=\left(\eta_z^2+2\,\varrho-2\right)/(16\,\pi\,\eta_z^3)$ and $t^2_{zz}=-\,2\,t^2_{xx}$. For $\eta_z\to0$, we have $\hat\Pi\to K(\eta_x^2)$, and $t^2_{xz}$ and $t^2_{zx}$ reduce to the expressions with $K(\eta_x^2)$ and $E(\eta_x^2)$ of Case~I.
 
 For the small-tilt expansion, we expand $1/(1+\bs\eta\cdot\bs\nu)=\sum_{n}(-\bs\eta\cdot\bs\nu)^n$ in Eq.~\eqref{eqSab} up to $n=3$. The remaining $\gamma$- and $\phi$-integrals involve only trigonometric monomials. Summing the contributions order by order in the tilt gives Eq.~\eqref{eqvnrser}, and $\sum_a t^2_{aa}=0$ is satisfied at each order.
 
@@ -1689,9 +1689,9 @@ For the small-tilt expansion, we expand $1/(1+\bs\eta\cdot\bs\nu)=\sum_{n}(-\bs\
 
 From Eq.~\eqref{eqbcpnr}, we have $(\Omega_s)_b=(-1)^{s+1}\,\pi\,\delta(k_z)\,\delta(\kappa_\perp)\,\hat\phi_b$, which is nonzero only on the ring. There, $\varepsilon_s=\tilde\eta\cos\phi$, since $k_z=0$ and $\kappa_\perp=0$, and the tilt part of the velocity is $v_0\,\eta_a$. As in Case~I, we retain only the latter. Hence
 \begin{align}
-t^s_{ab} = -\,(-1)^{s+1}\,\pi\,v_0\,\eta_a\,\frac{k_0}{(2\,\pi)^3} \int_0^{2\,\pi} d\phi\; \hat\phi_b\;\delta (\tilde\eta\cos\phi-\mu) \,,
+t^s_{ab} = (-1)^{s}\,\pi\,v_0\,\eta_a\,\frac{k_0}{(2\,\pi)^3} \int_0^{2\,\pi} d\phi\; \hat\phi_b\;\delta (\tilde\eta\cos\phi-\mu) \,,
 \end{align}
-with $\hat\phi_b=(-\sin\phi,\cos\phi,0)$. Only $b=y$ survives the $\phi$-integration, with $\hat\phi_y=\cos\phi$. The $\delta$-function has support at $\phi=\pm\arccos(\mu/\tilde\eta)$ for $\mu\le\tilde\eta$, and each root contributes $\cos\phi/(\tilde\eta\,|\sin\phi|)=\mu/(\tilde\eta\,\sqrt{\tilde\eta^2-\mu^2})$. The two roots together give
+with $\hat\phi_b=(-\sin\phi,\cos\phi,0)$. Only $b=y$ survives the $\phi$-integration, with $\hat\phi_y=\cos\phi$. The $\delta$-function has support at $\phi=\pm\cos^{-1}(\mu/\tilde\eta)$ for $\mu\le\tilde\eta$, and each root contributes $\cos\phi/(\tilde\eta\,|\sin\phi|)=\mu/(\tilde\eta\,\sqrt{\tilde\eta^2-\mu^2})$. The two roots together give
 \begin{align}
 \int_0^{2\,\pi} d\phi\,\cos\phi\;\delta (\tilde\eta\cos\phi-\mu) = \frac{2\,\mu}{\tilde\eta\,\sqrt{\tilde\eta^2-\mu^2}}\;\Theta(\tilde\eta-\mu)\,.
 \end{align}
@@ -1745,7 +1745,7 @@ Let $r$ be the vector with components $r^{\tilde\chi}_m$. Applying $\mathcal A$ 
 \sum_{\tilde\chi,\,m}\mathcal A_{(\chi n),(\tilde\chi m)}\,r^{\tilde\chi}_m=r^\chi_n-t_{nn}\sum_{\tilde\chi}\beta_{\chi\tilde\chi}\,u^{\tilde\chi}_n=0\,.
 \label{eqsingnull}
 \end{align}
-The vector $r$ is therefore a null vector of $\mathcal A$. The identity holds for any weights $\mathcal W_\chi$, and hence for any $B_z$ and any ratio $\beta^{\rm inter}/\beta^{\rm intra}$.
+The vector $r$ is therefore a null vector of $\mathcal A$. The identity holds for any weights $\mathcal W_\chi$, and hence for any $B_z$ and any ratio $\beta^{\rm inter}/\beta^{\rm intr}$.
 
 The identity of Eq.~\eqref{eqsingnull} provides a test of any numerical implementation of $\mathcal A$ that does not rely on a reference matrix. The test can be implemented in the following steps. We first evaluate the moments $u^\chi_n$ of every node over the full range of $\theta$. The coefficients $r^\chi_n$ then follow from Eq.~\eqref{eqsingr} and define the inverse relaxation time, and the relaxation time is thereby built from exactly these numbers. Next, we evaluate the moments $\mathcal Q^\chi_{nm}$ with this relaxation time and assemble $\mathcal A$ from its matrix elements in Eq.~\eqref{eqsingA}. We then compute the vector $\mathcal A\,r$ and its relative norm $\lVert\mathcal A\,r\rVert/\lVert r\rVert$ together with its individual components. This residual should vanish up to the accuracy of the angular integrals, whereas a residual of the order of unity signals an inconsistency in the normalisation. Finally, the rank is obtained from the singular values of $\mathcal A$, and not from its determinant, which does not carry a scale. Singular values below a tolerance that is set by the integration accuracy are counted as zero, and their number should equal the deficit given below.
 
@@ -1754,7 +1754,7 @@ The zero mode is unique, which follows from the symmetry of $\mathcal W_\chi\,\m
 \sum_\chi\int d\theta\,\mathcal W_\chi\,\Lambda_\chi\,\mathcal L\Lambda_\chi
 = -\,\frac{1}{2}\sum_{\chi,\tilde\chi}\beta_{\chi\tilde\chi}\int d\theta\,d\theta^\prime\,\mathcal W_\chi(\theta)\,\mathcal W_{\tilde\chi}(\theta^\prime)\,\mathcal T_{\chi\tilde\chi}(\theta,\theta^\prime)\left[\Lambda_\chi(\theta)-\Lambda_{\tilde\chi}(\theta^\prime)\right]^2 \,,
 \end{align}
-which vanishes only if $\Lambda$ is constant on every set of nodes connected by a nonzero $\beta_{\chi\tilde\chi}$. The overlap functions are squared spinor overlaps, which are nonnegative and vanish only at isolated angles. For a single node, the kernel of $\mathcal L$ is thus spanned by the constant function. The same holds for a pair of nodes with $\beta^{\rm inter}\neq0$, since the internode channel connects them. The kernel of $\mathcal A$ is then one-dimensional, and the deficit is 1. For $\beta^{\rm inter}=0$, the two nodes decouple, and the constants on the two nodes can be chosen independently, so that the deficit is 2. The ranks are therefore $1$ out of $2$ for the VNR, $2$ out of $3$ for the single-node HSM, and $5$ out of $6$ or $4$ out of $6$ for the two-node HSM, with $\beta^{\rm inter}\neq0$ or $\beta^{\rm inter}=0$, respectively. For the HSM, we have also verified these ranks numerically, at $B_z=0$ and at nonzero $B_z$ of both signs, and for several values of $\beta^{\rm inter}/\beta^{\rm intra}$.
+which vanishes only if $\Lambda$ is constant on every set of nodes connected by a nonzero $\beta_{\chi\tilde\chi}$. The overlap functions are squared spinor overlaps, which are nonnegative and vanish only at isolated angles. For a single node, the kernel of $\mathcal L$ is thus spanned by the constant function. The same holds for a pair of nodes with $\beta^{\rm inter}\neq0$, since the internode channel connects them. The kernel of $\mathcal A$ is then one-dimensional, and the deficit is 1. For $\beta^{\rm inter}=0$, the two nodes decouple, and the constants on the two nodes can be chosen independently, so that the deficit is 2. The ranks are therefore $1$ out of $2$ for the VNR, $2$ out of $3$ for the single-node HSM, and $5$ out of $6$ or $4$ out of $6$ for the two-node HSM, with $\beta^{\rm inter}\neq0$ or $\beta^{\rm inter}=0$, respectively.
 
 The number of null vectors equals the number of independent electron numbers that are conserved by the elastic collision operator, since each of them corresponds to one constant mode within the span of the ansatz. A single node conserves its own electron number, which gives a deficit of 1. For two nodes with $\beta^{\rm inter}=0$, the electron number at each node is separately conserved, which gives a deficit of 2. For $\beta^{\rm inter}\neq0$, only the total electron number is conserved, and the deficit is again 1. This count reproduces the ranks quoted above.
 
